@@ -1,6 +1,5 @@
 package recomovie.userservice.register.token;
 
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import recomovie.userservice.user.User;
@@ -10,11 +9,14 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Service
-@AllArgsConstructor
 public class ConfirmationTokenService {
     @Value("${token.expiration.time}")
-    public final Integer TOKEN_EXPIRATION_TIME;
+    public Integer TOKEN_EXPIRATION_TIME;
     private ConfirmationTokenRepository confirmationTokenRepository;
+
+    public ConfirmationTokenService(ConfirmationTokenRepository confirmationTokenRepository) {
+        this.confirmationTokenRepository = confirmationTokenRepository;
+    }
 
     public void saveConfirmationToken(ConfirmationToken token) {
         confirmationTokenRepository.saveAndFlush(token);

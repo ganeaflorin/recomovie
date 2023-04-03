@@ -1,6 +1,5 @@
 package recomovie.userservice.register;
 
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import recomovie.userservice.email.EmailService;
@@ -20,14 +19,20 @@ import static recomovie.userservice.constants.ErrorConstants.TOKEN_EXPIRED;
 import static recomovie.userservice.constants.ErrorConstants.TOKEN_NOT_FOUND;
 
 @Service
-@AllArgsConstructor
 public class RegisterService {
     @Value("${confirm.path}")
-    private final String confirmPath;
+    private String confirmPath;
     private final ConfirmationTokenService confirmationTokenService;
     private final EmailValidator emailValidator;
     private final EmailService emailService;
     private final UserService userService;
+
+    public RegisterService(ConfirmationTokenService confirmationTokenService, EmailValidator emailValidator, EmailService emailService, UserService userService) {
+        this.confirmationTokenService = confirmationTokenService;
+        this.emailValidator = emailValidator;
+        this.emailService = emailService;
+        this.userService = userService;
+    }
 
     public String register(RegisterRequest request) {
         boolean isValidEmail = emailValidator.test((request.getEmail()));

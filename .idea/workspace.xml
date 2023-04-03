@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb382d6f-1c35-4f4f-a983-c05146d3783d" name="Changes" comment="feat: #1 - project setup, user service">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="cb382d6f-1c35-4f4f-a983-c05146d3783d" name="Changes" comment="feat: #3 - add user service">
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/UserServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/user/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/email/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/email/EmailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/register/RegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/register/RegisterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/register/token/ConfirmationTokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/register/token/ConfirmationTokenService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -191,7 +195,7 @@
       <workItem from="1680463034398" duration="12597000" />
       <workItem from="1680545641623" duration="6304000" />
       <workItem from="1680551996920" duration="11000" />
-      <workItem from="1680552140527" duration="309000" />
+      <workItem from="1680552140527" duration="1567000" />
     </task>
     <task id="LOCAL-00001" summary="feat: #1 - project setup, user service">
       <created>1680551072856</created>
@@ -200,7 +204,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680551072856</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: #2 - add gitignore">
+      <created>1680552499575</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680552499575</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: #3 - add user service">
+      <created>1680552528739</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680552528739</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +226,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: #1 - project setup, user service" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: #1 - project setup, user service" />
+    <MESSAGE value="feat: #2 - add gitignore" />
+    <MESSAGE value="feat: #3 - add user service" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: #3 - add user service" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

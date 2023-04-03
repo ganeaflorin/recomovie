@@ -2,7 +2,6 @@ package recomovie.userservice.email;
 
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
-import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -15,13 +14,19 @@ import static recomovie.userservice.constants.StringConstants.EMAIL_FAILURE;
 import static recomovie.userservice.constants.StringConstants.EMAIL_SUBJECT;
 
 @Service
-@AllArgsConstructor
 public class EmailService {
     private final static Logger LOGGER = LoggerFactory
             .getLogger(EmailService.class);
+
     @Value("${spring.mail.username}")
-    private final String senderEmail;
+    private String senderEmail;
+
+
     private final JavaMailSender mailSender;
+
+    public EmailService(JavaMailSender mailSender) {
+        this.mailSender = mailSender;
+    }
 
     public void send(String email, String username, String link) {
         try {
