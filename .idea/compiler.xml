@@ -7,9 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ratings-data-service" />
         <module name="movie-info-service" />
         <module name="discovery-server" />
+        <module name="recommendation-system-service" />
+        <module name="ratings-data-service" />
         <module name="user-service" />
         <module name="movie-catalog-service" />
         <module name="gateway" />
@@ -23,6 +24,7 @@
       <module name="movie-catalog-service" options="-parameters" />
       <module name="movie-info-service" options="-parameters" />
       <module name="ratings-data-service" options="-parameters" />
+      <module name="recommendation-system-service" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>
   </component>

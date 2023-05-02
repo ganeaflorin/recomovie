@@ -4,14 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb382d6f-1c35-4f4f-a983-c05146d3783d" name="Changes" comment="feat: #3 - add user service">
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/UserServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/user/UserService.java" afterDir="false" />
+    <list default="true" id="cb382d6f-1c35-4f4f-a983-c05146d3783d" name="Changes" comment="fix: #4 - fixed user service import">
+      <change afterPath="$PROJECT_DIR$/movie_recommender_service/movie_recommender_service/api/controllers/similar_movies.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie_recommender_service/movie_recommender_service/api/models/get_similar_movies.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie_recommender_service/movie_recommender_service/api/scripts/movie_data_scraper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nlp_service/nlp_service/api/controllers/get_processed_input.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nlp_service/nlp_service/api/models/nlp_trained_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendation-system-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendation-system-service/src/main/java/recomovie/recommendationsystemservice/RecommendationSystemServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendation-system-service/src/main/java/recomovie/recommendationsystemservice/models/MovieRecommendation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendation-system-service/src/main/java/recomovie/recommendationsystemservice/models/ProcessedInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendation-system-service/src/main/java/recomovie/recommendationsystemservice/models/UserInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendation-system-service/src/main/java/recomovie/recommendationsystemservice/resources/RecommendationSystemResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendation-system-service/src/main/java/recomovie/recommendationsystemservice/utils/StringConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommendation-system-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/email/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/email/EmailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/register/RegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/register/RegisterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/register/token/ConfirmationTokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/register/token/ConfirmationTokenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +86,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Java",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "spring.configuration.checksum": "a97cd37ea68300bc2ba47faa347456b9",
     "vue.rearranger.settings.migration": "true"
   },
@@ -106,6 +118,7 @@
       <toRun name="MovieCatalogServiceApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="MovieInfoServiceApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="RatingsDataServiceApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="RecommendationSystemServiceApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="UserServiceApplication" type="SpringBootApplicationConfigurationType" />
       <method v="2" />
     </configuration>
@@ -144,6 +157,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RecommendationSystemServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="recommendation-system-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="recomovie.recommendationsystemservice.RecommendationSystemServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="recomovie.recommendationsystemservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="user-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="recomovie.userservice.UserServiceApplication" />
@@ -165,6 +191,7 @@
       <item itemvalue="Spring Boot.MovieInfoServiceApplication" />
       <item itemvalue="Spring Boot.RatingsDataServiceApplication" />
       <item itemvalue="Spring Boot.UserServiceApplication" />
+      <item itemvalue="Spring Boot.RecommendationSystemServiceApplication" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -195,7 +222,11 @@
       <workItem from="1680463034398" duration="12597000" />
       <workItem from="1680545641623" duration="6304000" />
       <workItem from="1680551996920" duration="11000" />
-      <workItem from="1680552140527" duration="1567000" />
+      <workItem from="1680552140527" duration="1971000" />
+      <workItem from="1680629308521" duration="3638000" />
+      <workItem from="1682959690128" duration="19000" />
+      <workItem from="1682961606840" duration="362000" />
+      <workItem from="1683039281801" duration="14120000" />
     </task>
     <task id="LOCAL-00001" summary="feat: #1 - project setup, user service">
       <created>1680551072856</created>
@@ -218,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680552528739</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix: #4 - fixed user service import">
+      <created>1680553867698</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680553867698</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,7 +266,8 @@
     <MESSAGE value="feat: #1 - project setup, user service" />
     <MESSAGE value="feat: #2 - add gitignore" />
     <MESSAGE value="feat: #3 - add user service" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: #3 - add user service" />
+    <MESSAGE value="fix: #4 - fixed user service import" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: #4 - fixed user service import" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
