@@ -24,8 +24,8 @@ tfidf_keywords = TfidfVectorizer(preprocessor=lambda x: x, tokenizer=lambda x: x
 tfidf_cast = TfidfVectorizer(preprocessor=lambda x: x, tokenizer=lambda x: x)
 tfidf_directors = TfidfVectorizer(preprocessor=lambda x: x, tokenizer=lambda x: x)
 
-feature_weights = {"keywords": 0.3, "genres": 0.1, "cast": 0.3, "directors": 0.1, "releaseDate": 0.1,
-                   "voteCount": 0.05, "voteAverage": 0.05}
+feature_weights = {"keywords": 0.25, "genres": 0.15, "cast": 0.35, "directors": 0.15, "releaseDate": 0.1,
+                   "voteCount": 0.0, "voteAverage": 0.0}
 
 
 def strip_year_from_date(date):
@@ -55,8 +55,9 @@ def get_tfidf_transform(tfidf, df, column_name, weight):
 
 def create_content_profile_for_file(file, is_fit_transform):
     film_data = pd.read_csv(file,
-                            converters={"directors": lambda x: [x], "genres": literal_eval, "keywords": literal_eval,
-                                        "cast": literal_eval})
+                            converters={"directors": lambda x: [x.lower()], "genres": lambda x: literal_eval(x.lower()), "keywords": lambda x: literal_eval(x.lower()),
+                                        "cast": lambda x: literal_eval(x.lower())})
+    print(film_data)
     film_data['releaseDate'] = normalize_release_date(scaler_release_date, film_data, is_fit_transform) * feature_weights["releaseDate"]
     film_data['voteAverage'] = normalize(scaler_vote_average, film_data['voteAverage'], is_fit_transform) * feature_weights["voteAverage"]
     film_data['voteCount'] = normalize(scaler_vote_count, film_data['voteCount'], is_fit_transform) * feature_weights["voteCount"]

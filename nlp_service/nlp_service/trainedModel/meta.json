@@ -21,7 +21,8 @@
       "ACTOR",
       "DIRECTOR",
       "GENRE",
-      "KEYWORD"
+      "KEYWORD",
+      "RELEASE_DATE"
     ]
   },
   "pipeline":[

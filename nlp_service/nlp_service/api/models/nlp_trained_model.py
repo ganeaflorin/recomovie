@@ -1,31 +1,19 @@
 import random
-from enum import Enum
-
+import re
 import spacy
 from spacy.training.example import Example
 from ast import literal_eval
 import os
+from nlp_service.resources.constants import *
 
 
-class MovieFeature(Enum):
-    CAST = "cast"
-    KEYWORDS = "keywords"
-    DIRECTOR = "director"
-    GENRES = "genres"
-    RELEASE_DATE = "release_date"
-
-
-class Entities(Enum):
-    ACTOR = "ACTOR"
-    KEYWORD = "KEYWORD"
-    DIRECTOR = "DIRECTOR"
-    GENRE = "GENRE"
-    RELEASE_DATE = "RELEASE_DATE"
-
-
-training_texts_file = "C:\\Users\\andre\\Downloads\\recomovie\\nlp_service\\nlp_service\\resources\\nlp_training_texts"
-training_entities_file = "C:\\Users\\andre\\Downloads\\recomovie\\nlp_service\\nlp_service\\resources\\nlp_training_entities"
-trained_model_path = "C:\\Users\\andre\\Downloads\\recomovie\\nlp_service\\nlp_service\\trainedModel"
+def format_release_date(release_date):
+    date = re.sub(NON_DIGIT_REGEX, EMPTY_STRING, release_date)
+    if len(date) != SPECIFIC_YEAR_DIGITS:
+        if int(date) <= CENTURY_BREAKPOINT:
+            return CURRENT_CENTURY_PREFIX + date
+        return PREVIOUS_CENTURY_PREFIX + date
+    return date
 
 
 def read_data_from_files(texts_file, entities_file):
@@ -72,19 +60,19 @@ def train_model(model_path, data, iterations):
 
 
 def get_user_preferences_dictionary(entities):
-    user_preferences = {"genres": [], "keywords": [], "directors": [], "cast": [], "releaseDate": "2005", "voteCount": 5000, "voteAverage": 8.5}
+    user_preferences = {"genres": [], "keywords": [], "directors": [], "cast": [], "releaseDate": "", "voteCount": 0, "voteAverage": 0.0}
     for ent in entities:
         match ent.label_:
             case "GENRE":
-                user_preferences["genres"].append(ent.text)
+                user_preferences["genres"].append(ent.text.lower())
             case "KEYWORD":
-                user_preferences["keywords"].append(ent.text)
+                user_preferences["keywords"].append(ent.text.lower())
             case "ACTOR":
-                user_preferences["cast"].append(ent.text)
+                user_preferences["cast"].append(ent.text.lower())
             case "DIRECTOR":
-                user_preferences["directors"].append(ent.text)
+                user_preferences["directors"].append(ent.text.lower())
             case "RELEASE_DATE":
-                user_preferences["releaseDate"] = ent.text
+                user_preferences["releaseDate"] = format_release_date(ent.text)
             case _:
                 return
     return user_preferences

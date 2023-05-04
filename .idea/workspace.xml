@@ -4,26 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb382d6f-1c35-4f4f-a983-c05146d3783d" name="Changes" comment="fix: #4 - fixed user service import">
-      <change afterPath="$PROJECT_DIR$/movie_recommender_service/movie_recommender_service/api/controllers/similar_movies.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie_recommender_service/movie_recommender_service/api/models/get_similar_movies.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie_recommender_service/movie_recommender_service/api/scripts/movie_data_scraper.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nlp_service/nlp_service/api/controllers/get_processed_input.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nlp_service/nlp_service/api/models/nlp_trained_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recommendation-system-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recommendation-system-service/src/main/java/recomovie/recommendationsystemservice/RecommendationSystemServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recommendation-system-service/src/main/java/recomovie/recommendationsystemservice/models/MovieRecommendation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recommendation-system-service/src/main/java/recomovie/recommendationsystemservice/models/ProcessedInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recommendation-system-service/src/main/java/recomovie/recommendationsystemservice/models/UserInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recommendation-system-service/src/main/java/recomovie/recommendationsystemservice/resources/RecommendationSystemResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recommendation-system-service/src/main/java/recomovie/recommendationsystemservice/utils/StringConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recommendation-system-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="cb382d6f-1c35-4f4f-a983-c05146d3783d" name="Changes" comment="fix: #6 - add services for nlp, recommendations, and service connecting these 2 leftovers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie_recommender_service/movie_recommender_service/api/models/get_similar_movies.py" beforeDir="false" afterPath="$PROJECT_DIR$/movie_recommender_service/movie_recommender_service/api/models/get_similar_movies.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie_recommender_service/movie_recommender_service/api/scripts/movie_data_scraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/movie_recommender_service/movie_recommender_service/api/scripts/movie_data_scraper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie_recommender_service/movie_recommender_service/resources/movie_dataset.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlp_service/nlp_service/api/models/nlp_trained_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlp_service/nlp_service/api/models/nlp_trained_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlp_service/nlp_service/resources/nlp_training_entities" beforeDir="false" afterPath="$PROJECT_DIR$/nlp_service/nlp_service/resources/nlp_training_entities" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlp_service/nlp_service/resources/nlp_training_texts" beforeDir="false" afterPath="$PROJECT_DIR$/nlp_service/nlp_service/resources/nlp_training_texts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlp_service/nlp_service/trainedModel/config.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlp_service/nlp_service/trainedModel/meta.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlp_service/nlp_service/trainedModel/ner/cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlp_service/nlp_service/trainedModel/ner/model" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlp_service/nlp_service/trainedModel/ner/moves" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlp_service/nlp_service/trainedModel/tokenizer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlp_service/nlp_service/trainedModel/vocab/key2row" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlp_service/nlp_service/trainedModel/vocab/lookups.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlp_service/nlp_service/trainedModel/vocab/strings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlp_service/nlp_service/trainedModel/vocab/vectors" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlp_service/nlp_service/trainedModel/vocab/vectors.cfg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +86,7 @@
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "spring.configuration.checksum": "a97cd37ea68300bc2ba47faa347456b9",
+    "spring.configuration.checksum": "d94eca9435b23966bd25584c15c35ee8",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -226,7 +225,8 @@
       <workItem from="1680629308521" duration="3638000" />
       <workItem from="1682959690128" duration="19000" />
       <workItem from="1682961606840" duration="362000" />
-      <workItem from="1683039281801" duration="14120000" />
+      <workItem from="1683039281801" duration="14632000" />
+      <workItem from="1683216365200" duration="2033000" />
     </task>
     <task id="LOCAL-00001" summary="feat: #1 - project setup, user service">
       <created>1680551072856</created>
@@ -256,7 +256,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680553867698</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix: #5 - add services for nlp, recommendations, and service connecting these 2">
+      <created>1683059105986</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683059105986</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix: #6 - add services for nlp, recommendations, and service connecting these 2 leftovers">
+      <created>1683059130157</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683059130157</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,7 +281,9 @@
     <MESSAGE value="feat: #2 - add gitignore" />
     <MESSAGE value="feat: #3 - add user service" />
     <MESSAGE value="fix: #4 - fixed user service import" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: #4 - fixed user service import" />
+    <MESSAGE value="fix: #5 - add services for nlp, recommendations, and service connecting these 2" />
+    <MESSAGE value="fix: #6 - add services for nlp, recommendations, and service connecting these 2 leftovers" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: #6 - add services for nlp, recommendations, and service connecting these 2 leftovers" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

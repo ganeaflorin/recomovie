@@ -4,14 +4,14 @@ import csv
 csv_columns = ['id', 'title', 'releaseDate', 'voteAverage', 'voteCount', 'keywords', 'genres', 'cast', 'directors']
 API_URL = 'https://api.themoviedb.org/3'
 API_KEY = '3ea83eb3dc26b179e45630d02e2a3668'
-csv_file = "movie_dataset.csv"
+csv_file = "C:\\Users\\andre\\Downloads\\recomovie\\movie_recommender_service\\movie_recommender_service\\resources\\movie_dataset.csv"
 
 
 def get_keywords(movie_id):
     payload = {'api_key': API_KEY}
     r = requests.get(API_URL + '/movie/' + str(movie_id) + '/keywords', params=payload)
     keywords = []
-    for keyword in r.json()['keywords'][:10]:
+    for keyword in r.json()['keywords'][:9]:
         keywords.append(keyword['name'])
     return keywords
 
@@ -40,7 +40,7 @@ def get_credits(movie_id):
 def get_movies(number_of_pages):
     for page in range(1, number_of_pages + 1):
         print(page)
-        payload = {'api_key': API_KEY, 'sort_by': 'voteCount.desc', 'page': page}
+        payload = {'api_key': API_KEY, 'sort_by': 'vote_count.desc', 'page': page}
         r = requests.get(API_URL + '/discover/movie', params=payload)
         if "results" in r.json():
             response_movies = r.json()['results']
@@ -49,9 +49,9 @@ def get_movies(number_of_pages):
                 write_row_to_csv({
                     'id': movie['id'],
                     'title': movie['title'],
-                    'releaseDate': movie['releaseDate'],
-                    'voteAverage': movie['voteAverage'],
-                    'voteCount': movie['voteCount'],
+                    'releaseDate': movie['release_date'],
+                    'voteAverage': movie['vote_average'],
+                    'voteCount': movie['vote_count'],
                     'keywords': get_keywords(movie['id']),
                     'genres': get_genres(movie['id']),
                     'cast': cast,
@@ -79,4 +79,4 @@ def write_csv_fieldnames():
 
 
 write_csv_fieldnames()
-get_movies(250)
+get_movies(200)
