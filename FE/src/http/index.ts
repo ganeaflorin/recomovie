@@ -8,6 +8,6 @@ export const getRequest = (url: string, params: { [key: string]: string }) =>
 
 
 export const postRequest = (url: string, payload: { [key: string]: string }) =>
-    axios.post(url, payload).then((response) => { return { response: response.data } })
+    axios.post(url, payload).then((response) => { return { response: response } })
         .catch((error) => error)
 

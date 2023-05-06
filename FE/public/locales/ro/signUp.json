@@ -1,0 +1,16 @@
+{
+    "username": {
+        "label": "Username"
+    },
+    "email": {
+        "label": "E-mail"
+    },
+    "password": {
+        "label": "Parola"
+    },
+    "confirmPassword": {
+        "label": "Confirma parola"
+    },
+    "submitButton": "Inscrie-te",
+    "title": "Inscrie-te"
+}

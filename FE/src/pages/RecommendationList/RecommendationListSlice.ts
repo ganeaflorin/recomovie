@@ -38,7 +38,5 @@ export const recommendationListSlice = createSlice({
     },
 })
 
-// Action creators are generated for each case reducer function
 export const { getRecommendationListSuccess, getRecommendationListFailure, getRecommendationListTrigger } = recommendationListSlice.actions
-
 export default recommendationListSlice.reducer
