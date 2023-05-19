@@ -1,0 +1,11 @@
+{
+    "username": {
+        "label": "Username"
+    },
+    "password": {
+        "label": "Parola"
+    },
+    "submitButton": "Conecteaza-te",
+    "title": "Conecteaza-te",
+    "signUpLink": "Inca nu esti membru? Apasa aici pentru a te inscrie."
+}

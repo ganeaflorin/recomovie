@@ -1,5 +1,5 @@
 import endpoints from "../../common/endpoints";
-import { getRequest, postRequest } from "../../http";
+import { postRequest } from "../../http";
 
 const signUp = (payload: any) =>
     postRequest(endpoints.signUp, payload)

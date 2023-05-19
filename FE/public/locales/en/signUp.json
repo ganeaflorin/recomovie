@@ -1,16 +1,36 @@
 {
     "username": {
-        "label": "Username"
+        "label": "Username",
+        "errors": {
+            "minLength": "Username should contain at least 3 characters.",
+            "required": "Username is required."
+        }
     },
     "email": {
-        "label": "E-mail"
+        "label": "E-mail",
+        "errors": {
+            "regexp": "Email format is not correct.",
+            "required": "Email is required."
+        }
     },
     "password": {
-        "label": "Password"
+        "label": "Password",
+        "errors": {
+            "regexp": "Password should contain at least: 8 characters, one uppercase letter, one lowercase letter, one digit and one special character.",
+            "required": "Password is required."
+        }
     },
     "confirmPassword": {
-        "label": "Confirm password"
+        "label": "Confirm password",
+        "errors": {
+            "notEqual": "Password and confirm password do not match.",
+            "required": "Confirm password is required."
+        }
+    },
+    "errors": {
+        "USERNAME_ALREADY_EXISTS": "This username already exists."
     },
     "submitButton": "Sign Up",
-    "title": "Sign Up"
+    "title": "Sign Up",
+    "confirmationToken": "Please check your email in order to active your account."
 }

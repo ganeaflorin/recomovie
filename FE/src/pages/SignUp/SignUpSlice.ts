@@ -10,6 +10,7 @@ const initialState: SignUpState = {
         confirmPassword: "",
     },
     isLoading: false,
+    isSuccessSignUp: false,
     error: undefined,
 }
 
@@ -23,8 +24,15 @@ export const signUpSlice = createSlice({
         signUpTrigger: (state) => {
             state.isLoading = true;
         },
-        signUpSuccess: () => { },
-        signUpFailure: () => { }
+        signUpSuccess: (state) => {
+            state.isLoading = false;
+            state.isSuccessSignUp = true;
+        },
+        signUpFailure: (state, action) => {
+            state.error = action.payload;
+            state.isLoading = false;
+            state.isSuccessSignUp = false;
+        }
     },
 })
 

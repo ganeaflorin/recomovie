@@ -8,7 +8,7 @@ public class MovieRecommendation {
     private String title;
     private String cosineSimilarity;
 
-    public MovieRecommendation(String id, String title, String cosineSimilarity) {
+    public MovieRecommendation(String id, String title, String cosineSimilarity, String description) {
         this.id = id;
         this.title = title;
         this.cosineSimilarity = cosineSimilarity;

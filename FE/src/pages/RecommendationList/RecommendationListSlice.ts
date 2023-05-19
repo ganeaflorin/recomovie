@@ -1,27 +1,34 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { RecommendationListState } from '../../entities/recommendationList';
 
-interface Movie {
-    id: string;
-    title: string;
-    consineSimilarity: string;
-}
 
-export interface RecommendationListState {
-    movies: Movie[];
-    error: Error | undefined;
-    isLoading: boolean;
-}
 
 const initialState: RecommendationListState = {
     movies: [],
+    input: 'I like drama and crime movies.',
     isLoading: false,
     error: undefined,
+    playlist: {
+        name: '',
+        isSaved: false,
+        isLoading: false,
+        error: undefined,
+    }
 }
 
 export const recommendationListSlice = createSlice({
     name: 'recommendationList',
     initialState,
     reducers: {
+        clearData: (state) => {
+            return { ...initialState };
+        },
+        updateInput: (state, action) => {
+            state.input = action.payload;
+        },
+        updatePlaylistName: (state, action) => {
+            state.playlist.name = action.payload;
+        },
         getRecommendationListSuccess: (state, action) => {
             state.movies = action.payload;
             state.error = undefined;
@@ -32,11 +39,22 @@ export const recommendationListSlice = createSlice({
             state.error = action.payload;
             state.isLoading = false;
         },
-        getRecommendationListTrigger: (state, action) => {
+        getRecommendationListTrigger: (state) => {
             state.isLoading = true;
+        },
+        savePlaylistTrigger: (state) => {
+            state.playlist.isLoading = true;
+        },
+        savePlaylistSuccess: (state) => {
+            state.playlist.isSaved = true;
+            state.playlist.isLoading = false;
+        },
+        savePlaylistFailure: (state, action) => {
+            state.playlist.error = action.payload;
+            state.playlist.isLoading = false;
         }
     },
 })
 
-export const { getRecommendationListSuccess, getRecommendationListFailure, getRecommendationListTrigger } = recommendationListSlice.actions
+export const { clearData, updateInput, getRecommendationListSuccess, getRecommendationListFailure, getRecommendationListTrigger, updatePlaylistName, savePlaylistTrigger, savePlaylistSuccess, savePlaylistFailure } = recommendationListSlice.actions
 export default recommendationListSlice.reducer

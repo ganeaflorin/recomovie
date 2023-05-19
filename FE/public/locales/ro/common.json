@@ -2,5 +2,14 @@
   "languages": {
     "en": "Engleza",
     "ro": "Romana"
-  }
+  },
+  "loading": "Se incarca",
+  "navbar": {
+    "recommendations": "Recomandari",
+    "playlists": "Listele mele",
+    "login": "Conecteaza-te",
+    "logout": "Deconecteaza-te",
+    "changeLanguage": "Schimba limba"
+  },
+  "footer": "Florin Ganea © 2023"
 }

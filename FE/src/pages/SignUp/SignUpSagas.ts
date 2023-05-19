@@ -10,8 +10,7 @@ export function* signUpAsync() {
         signUp,
         fields,
     );
-    console.log("response: ", response);
-    console.log("err: ", error);
+
     if (response) {
         yield put({
             type: signUpSuccess.type,
@@ -20,7 +19,7 @@ export function* signUpAsync() {
     } else {
         yield put({
             type: signUpFailure.type,
-            payload: { error: error.toJSON() },
+            payload: error,
         });
     }
 }

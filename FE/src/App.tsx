@@ -6,14 +6,19 @@ import { useTranslation } from "react-i18next";
 import './i18n';
 import { Suspense } from 'react';
 import { Languages } from './entities/common';
-import { store } from './store';
+import { store, persistor } from './store';
 import { Provider } from 'react-redux'
+import { PersistGate } from 'redux-persist/integration/react';
 
-{/* {languages.map((lng) => (
-        <button key={lng} style={{ fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal' }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
-          {t(`languages.${lng}`)}
-        </button>
-      ))} */}
+// {
+//   {
+//     languages.map((lng) => (
+//       <button key={lng} style={{ fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal' }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
+//         {t(`languages.${lng}`)}
+//       </button>
+//     ))
+//   }
+// }
 
 function App() {
   const { t } = useTranslation(["common"]);
@@ -22,7 +27,9 @@ function App() {
   return (
     <Suspense fallback="...is loading">
       <Provider store={store}>
-        <RouterProvider router={router} />
+        <PersistGate loading={null} persistor={persistor}>
+          <RouterProvider router={router} />
+        </PersistGate>
       </Provider>
     </Suspense>
   )

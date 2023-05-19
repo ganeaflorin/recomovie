@@ -1,0 +1,8 @@
+{
+    "confirmationStatus": {
+        "EMAIL_ALREADY_CONFIRMED": "Your email is already confirmed.",
+        "EMAIL_CONFIRMED_SUCCESS": "Your email was successfully confirmed.",
+        "TOKEN_EXPIRED": "Your token is expired. We have sent you a new token, please check your email to confirm it.",
+        "TOKEN_NOT_FOUND": "Token not found."
+    }
+}

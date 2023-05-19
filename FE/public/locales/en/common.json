@@ -2,5 +2,14 @@
   "languages": {
     "en": "English",
     "ro": "Romanian"
-  }
+  },
+  "loading": "Loading",
+  "navbar": {
+    "recommendations": "Recommendations",
+    "playlists": "Playlists",
+    "login": "Login",
+    "changeLanguage": "Change language",
+    "logout": "Logout"
+  },
+  "footer": "Florin Ganea © 2023"
 }

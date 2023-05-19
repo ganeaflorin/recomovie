@@ -1,0 +1,15 @@
+{
+    "username": {
+        "label": "Username"
+    },
+    "password": {
+        "label": "Password"
+    },
+    "errors": {
+        "LOGIN_INVALID_CREDENTIALS": "Username or password incorrect.",
+        "ACCOUNT_NOT_CONFIRMED": "Your account is not confirmed yet. Check your email to confirm it."
+    },
+    "submitButton": "Log In",
+    "title": "Log In",
+    "signUpLink": "Not a member yet? Click here to sign up."
+}

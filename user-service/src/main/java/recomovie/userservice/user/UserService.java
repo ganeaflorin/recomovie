@@ -1,12 +1,15 @@
 package recomovie.userservice.user;
 
 import lombok.AllArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import static org.springframework.http.HttpStatus.CONFLICT;
+import static org.springframework.http.HttpStatus.CREATED;
 import static recomovie.userservice.constants.ErrorConstants.USERNAME_ALREADY_EXISTS;
 import static recomovie.userservice.constants.ErrorConstants.USERNAME_NOT_FOUND;
 
@@ -22,16 +25,17 @@ public class UserService implements UserDetailsService {
         return userRepository.findByUsername(username).orElseThrow(() -> new UsernameNotFoundException(USERNAME_NOT_FOUND));
     }
 
-    public void saveUser(User user) {
+    public ResponseEntity saveUser(User user) {
         boolean userExists = userRepository
                 .findByUsername(user.getUsername())
                 .isPresent();
         if (userExists) {
-            throw new IllegalStateException(USERNAME_ALREADY_EXISTS);
+            return new ResponseEntity<>(USERNAME_ALREADY_EXISTS, CONFLICT);
         }
         String encodedPassword = bCryptPasswordEncoder.encode(user.getPassword());
         user.setPassword(encodedPassword);
         userRepository.save(user);
+        return new ResponseEntity<>(CREATED);
     }
 
     public int enableUser(String username) {

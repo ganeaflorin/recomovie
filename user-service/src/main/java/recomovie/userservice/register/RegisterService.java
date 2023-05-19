@@ -1,6 +1,7 @@
 package recomovie.userservice.register;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import recomovie.userservice.email.EmailService;
 import recomovie.userservice.register.token.ConfirmationToken;
@@ -12,12 +13,18 @@ import recomovie.userservice.user.UserService;
 import java.time.LocalDateTime;
 
 import static java.util.Objects.nonNull;
+import static org.springframework.http.HttpStatus.BAD_REQUEST;
+import static org.springframework.http.HttpStatus.CONFLICT;
+import static org.springframework.http.HttpStatus.CREATED;
+import static org.springframework.http.HttpStatus.GONE;
+import static org.springframework.http.HttpStatus.OK;
 import static recomovie.userservice.constants.ErrorConstants.EMAIL_ALREADY_CONFIRMED;
 import static recomovie.userservice.constants.ErrorConstants.EMAIL_CONFIRMED_SUCCESS;
 import static recomovie.userservice.constants.ErrorConstants.EMAIL_FORMAT_NOT_VALID;
 import static recomovie.userservice.constants.ErrorConstants.TOKEN_EXPIRED;
 import static recomovie.userservice.constants.ErrorConstants.TOKEN_NOT_FOUND;
 
+@SuppressWarnings("ALL")
 @Service
 public class RegisterService {
     @Value("${confirm.path}")
@@ -34,35 +41,39 @@ public class RegisterService {
         this.userService = userService;
     }
 
-    public String register(RegisterRequest request) {
+    public ResponseEntity register(RegisterRequest request) {
         boolean isValidEmail = emailValidator.test((request.getEmail()));
         if (!isValidEmail) {
-            throw new IllegalStateException(EMAIL_FORMAT_NOT_VALID);
+            return new ResponseEntity<>(EMAIL_FORMAT_NOT_VALID, BAD_REQUEST);
         }
         User user = new User(request.getUsername(), request.getPassword(), request.getEmail(), UserRole.USER);
-        userService.saveUser(user);
-        return sendConfirmationMail(user);
+        ResponseEntity response = userService.saveUser(user);
+        if (response.getStatusCode().equals(CREATED)) {
+            sendConfirmationMail(user);
+        }
+        return response;
     }
 
-    private String sendConfirmationMail(User user) {
+    private void sendConfirmationMail(User user) {
         String token = confirmationTokenService.generateAndSaveToken(user);
         String link = confirmPath + token;
         emailService.send(user.getEmail(), user.getUsername(), link);
-        return token;
     }
 
-    public String confirmToken(String token) {
+    public ResponseEntity confirmToken(String token) {
         ConfirmationToken confirmationToken = confirmationTokenService.getToken(token).orElseThrow(() -> new IllegalStateException(TOKEN_NOT_FOUND));
         if (nonNull(confirmationToken.getConfirmedAt())) {
-            throw new IllegalStateException(EMAIL_ALREADY_CONFIRMED);
+            return new ResponseEntity<>(EMAIL_ALREADY_CONFIRMED, CONFLICT);
         }
         LocalDateTime expiresAt = confirmationToken.getExpiresAt();
         if (expiresAt.isBefore(LocalDateTime.now())) {
             sendConfirmationMail(confirmationToken.getUser());
-            throw new IllegalStateException(TOKEN_EXPIRED);
+            return new ResponseEntity<>(TOKEN_EXPIRED, GONE);
+
         }
         confirmationTokenService.setConfirmedAt(token);
         userService.enableUser(confirmationToken.getUser().getUsername());
-        return EMAIL_CONFIRMED_SUCCESS;
+        return new ResponseEntity<>(EMAIL_CONFIRMED_SUCCESS, OK);
+
     }
 }

@@ -1,0 +1,22 @@
+{
+    "input": {
+        "label": "Movie preferences"
+    },
+    "submitButton": "Get recommendations",
+    "clearButton": "Clear",
+    "instructions": "For better recommendations, please tell us about what types of movies you enjoy watching in English. You can mention your favorite genres, actors, directors, your preferred period of time of the release date and even specific keywords about your favorite movies' plot.",
+    "hoverExample": "Hover for an example",
+    "example": "I like drama and crime movies. I enjoy watching movies released in the 70s. I prefer movies directed by Steven Spielberg starring Robert De Niro, Marlon Brando and Leonardo DiCaprio. I enjoy movies about mafia and gangsters.",
+    "errors": {
+        "SERVICE_ERROR": "There is an issue on our side. Please try again later."
+    },
+    "movieDetails": {
+        "cast": "Top stars:",
+        "director": "Director:"
+    },
+    "title": "Based on your preferences, we recommend you the following movies. You can save them as a playlist that you can check out later in \"Playlists\" section.",
+    "playlist": {
+        "name": "Playlist name",
+        "saveButton": "Save"
+    }
+}
