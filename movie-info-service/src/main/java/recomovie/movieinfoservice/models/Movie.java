@@ -1,7 +1,17 @@
 package recomovie.movieinfoservice.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.persistence.CollectionTable;
+import jakarta.persistence.Column;
+import jakarta.persistence.ElementCollection;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.Table;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,29 +19,33 @@ import java.util.List;
 import static recomovie.movieinfoservice.constants.StringConstants.IMAGE_BASE_URL;
 
 
+@Getter
+@Setter
+@EqualsAndHashCode
 @NoArgsConstructor
-
+@Entity
+@Table(name = "movies")
 public class Movie {
-    //    @Id
+    @Id
     private Long id;
     private String title;
     private String releaseDate;
     private int runtime;
+    @Column(length = 8192)
     private String overview;
     private String posterPath;
     private String director;
-    //    @OneToMany
-    @JsonProperty(value = "genres", access = JsonProperty.Access.WRITE_ONLY)
-    private List<Genre> genres;
-    //    @OneToMany
-    @JsonProperty(value = "cast", access = JsonProperty.Access.WRITE_ONLY)
+    @ElementCollection
+    @CollectionTable(name="genres", joinColumns = @JoinColumn(name="movies_id"))
+    @Column(name="genre")
 
-    private List<Actor> cast;
+    private List<String> genres;
+    @ElementCollection
+    @CollectionTable(name="actors", joinColumns = @JoinColumn(name="movies_id"))
+    @Column(name="actor")
+    private List<String> cast;
 
-    private List<String> genreList;
-    private List<String> castList;
-
-    public Movie(Long id, String title, String releaseDate, int runtime, String overview, String posterPath, String director, List<Genre> genres, List<Actor> cast, List<String> genreList, List<String> castList) {
+    public Movie(Long id, String title, String releaseDate, int runtime, String overview, String posterPath, String director, List<String> genres, List<String> cast) {
         this.id = id;
         this.title = title;
         this.releaseDate = releaseDate;
@@ -41,8 +55,34 @@ public class Movie {
         this.director = director;
         this.genres = genres;
         this.cast = cast;
-        this.genreList = genreList;
-        this.castList = castList;
+    }
+
+    public Movie(MovieResponse movieResponse) {
+        this.id = movieResponse.getId();
+        this.title = movieResponse.getTitle();
+        this.releaseDate = movieResponse.getReleaseDate();
+        this.runtime = movieResponse.getRuntime();
+        this.overview = movieResponse.getOverview();
+        setPosterPath(movieResponse.getPosterPath());
+        this.director = movieResponse.getDirector();
+        this.genres = setGenresFromMovieResponse(movieResponse.getGenres());
+        this.cast = setCastFromMovieResponse(movieResponse.getCast());
+    }
+
+    public List<String> setGenresFromMovieResponse(List<Genre> genreList) {
+        List<String> genres = new ArrayList<>();
+        for (Genre genre : genreList) {
+            genres.add(genre.getName());
+        }
+        return genres;
+    }
+
+    public List<String> setCastFromMovieResponse(List<Actor> actorList) {
+        List<String> cast = new ArrayList<>();
+        for (Actor actor : actorList) {
+            cast.add(actor.getName());
+        }
+        return cast;
     }
 
     public Long getId() {
@@ -61,12 +101,10 @@ public class Movie {
         this.title = title;
     }
 
-    @JsonProperty("releaseDate")
     public String getReleaseDate() {
         return releaseDate;
     }
 
-    @JsonProperty("release_date")
     public void setReleaseDate(String releaseDate) {
         this.releaseDate = releaseDate;
     }
@@ -89,12 +127,10 @@ public class Movie {
         this.overview = overview;
     }
 
-    @JsonProperty("posterPath")
     public String getPosterPath() {
         return posterPath;
     }
 
-    @JsonProperty("poster_path")
     public void setPosterPath(String posterPath) {
         this.posterPath = IMAGE_BASE_URL + posterPath;
     }
@@ -107,44 +143,21 @@ public class Movie {
         this.director = director;
     }
 
-    public List<Genre> getGenres() {
+
+    public List<String> getGenres() {
         return genres;
     }
 
-    public void setGenres(List<Genre> genres) {
+    public void setGenres(List<String> genres) {
         this.genres = genres;
     }
 
-    public List<Actor> getCast() {
+    public List<String> getCast() {
         return cast;
     }
 
-    public void setCast(List<Actor> cast) {
+    public void setCast(List<String> cast) {
         this.cast = cast;
-    }
-
-    @JsonProperty("genres")
-    public List<String> getGenreList() {
-        return genreList;
-    }
-
-    public void setGenreList() {
-        this.genreList = new ArrayList<>();
-        for (Genre genre : this.genres) {
-            this.genreList.add(genre.getName());
-        }
-    }
-
-    @JsonProperty("cast")
-    public List<String> getCastList() {
-        return castList;
-    }
-
-    public void setCastList() {
-        this.castList = new ArrayList<>();
-        for (Actor actor : this.cast) {
-            this.castList.add(actor.getName());
-        }
     }
 
     public String toString() {

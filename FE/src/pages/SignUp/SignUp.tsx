@@ -35,13 +35,14 @@ const SignUp = () => {
     const isLoading = useSelector(getSignUpIsLoading);
     const error = useSelector(getSignUpError);
     const formHasError = Object.values(errors).some(value => value);
+
     const formConfig = [
         { key: SignUpFormKeys.username, label: t('username.label'), type: 'text', error: Boolean(errors[SignUpFormKeys.username]), helperText: errors[SignUpFormKeys.username], required: true, className: classes.formElement },
         { key: SignUpFormKeys.email, label: t('email.label'), type: 'email', error: Boolean(errors[SignUpFormKeys.email]), helperText: errors[SignUpFormKeys.email], required: true, className: classes.formElement },
         { key: SignUpFormKeys.password, label: t('password.label'), type: 'password', error: Boolean(errors[SignUpFormKeys.password]), helperText: errors[SignUpFormKeys.password], required: true, className: classes.formElement },
         { key: SignUpFormKeys.confirmPassword, label: t('confirmPassword.label'), type: 'password', error: Boolean(errors[SignUpFormKeys.confirmPassword]), helperText: errors[SignUpFormKeys.confirmPassword], required: true, className: classes.formElement }
     ];
-    // required condition can potentially be removed
+
     const getValidationRules = (fields: SignUpFields): ValidationRules => {
         return {
             [SignUpFormKeys.username]: [{ condition: fields.username.length === 0, message: t('username.errors.required') }, { condition: fields.username.length < 3, message: t('username.errors.minLength') }],
@@ -50,6 +51,7 @@ const SignUp = () => {
             [SignUpFormKeys.confirmPassword]: [{ condition: fields.confirmPassword.length === 0, message: t('confirmPassword.errors.required') }, { condition: fields.confirmPassword !== fields.password, message: t('confirmPassword.errors.notEqual') }],
         }
     }
+
     const checkValidationRulesByKey = (validationRules: ValidationRules, key: SignUpFormKeys) => {
         setErrors((prevErrors) => { return { ...prevErrors, [key]: undefined } })
         validationRules[key].forEach(({ condition, message }: TextFieldRule) => {

@@ -38,7 +38,7 @@ const PlaylistForm = () => {
     const userInput: string = useSelector(getInput);
     const userId: string = useSelector(getUserId);
 
-    const handleChange = (e: any) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { value } = e.target;
         dispatch(updatePlaylistName(value));
     }

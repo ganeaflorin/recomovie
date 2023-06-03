@@ -1,22 +1,22 @@
 {
     "input": {
-        "label": "Preferinte legate de filme"
+        "label": "Preferințe legate de filme"
     },
-    "submitButton": "Obtine recomandari",
-    "clearButton": "Sterge",
-    "instructions": "Pentru recomandari mai bune, te rugam sa ne spui ce tipuri de filme iti plac in limba engleza. Poti mentiona genurile tale favorite, actorii, regizorii, perioada de timp in care au fost lansate filmele tale favorite si chiar cuvinte cheie despre actiunea acestora.",
-    "hoverExample": "Tine cursorul aici pentru a vedea un exemplu",
+    "submitButton": "Obține recomandări",
+    "clearButton": "Șterge",
+    "instructions": "Pentru recomandări mai bune, te rugăm să ne spui ce tipuri de filme îți plac în limba engleză. Poți menționa genurile tale favorite, actorii, regizorii, perioada de timp în care au fost lansate filmele tale favorite și chiar cuvinte cheie despre acțiunea acestora.",
+    "hoverExample": "Ține cursorul aici pentru a vedea un exemplu",
     "example": "I like drama and crime movies. I enjoy watching movies released in 70s. I prefer movies directed by Steven Spielberg starring Robert De Niro, Marlon Brando and Leonardo DiCaprio. I enjoy movies about mafia and gangsters.",
     "errors": {
-        "SERVICE_ERROR": "A aparut o problema de partea noastra. Va rugam incercati mai tarziu."
+        "SERVICE_ERROR": "A apărut o problemă de partea noastră. Vă rugăm încercați mai târziu."
     },
     "movieDetails": {
         "cast": "Actori principali:",
         "director": "Regizor:"
     },
-    "title": "Conform preferintelor tale, iti recomandam urmatoarele filme. Poti sa le salvezi si ulterior sa le vizualizezi in sectiunea \"Listele mele\".",
+    "title": "Conform preferințelor tale, îți recomandăm următoarele filme. Poți să le salvezi și ulterior să le vizualizezi în secțiunea \"Listele mele\".",
     "playlist": {
         "name": "Numele listei",
-        "saveButton": "Salveaza"
+        "saveButton": "Salvează"
     }
 }

@@ -14,7 +14,6 @@ export const usersSlice = createSlice({
             state.isLoading = true;
         },
         getUsersSuccess: (state, action) => {
-            console.log(action.payload);
             state.users = action.payload;
             state.isLoading = false;
         },

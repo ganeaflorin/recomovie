@@ -1,16 +1,16 @@
 {
     "username": {
-        "label": "Username"
+        "label": "Nume de utilizator"
     },
     "email": {
         "label": "E-mail"
     },
     "password": {
-        "label": "Parola"
+        "label": "Parolă"
     },
     "confirmPassword": {
-        "label": "Confirma parola"
+        "label": "Confirmă parola"
     },
-    "submitButton": "Inscrie-te",
-    "title": "Inscrie-te"
+    "submitButton": "Înscrie-te",
+    "title": "Înscrie-te"
 }

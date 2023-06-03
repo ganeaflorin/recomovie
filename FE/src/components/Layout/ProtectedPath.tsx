@@ -4,7 +4,7 @@ import { getIsAuthenticated } from '../../pages/Login/selectors';
 import paths, { unprotectedPaths } from '../../common/paths';
 import { useNavigate } from 'react-router-dom';
 
-const ProtectedPath = ({ children }: { children: any }) => {
+const ProtectedPath = ({ children }: { children: React.ReactNode }) => {
     const path = window.location.pathname;
     const isAuthenticated = useSelector(getIsAuthenticated);
     const navigate = useNavigate();

@@ -1,9 +1,9 @@
 {
     "confirmationStatus": {
-        "EMAIL_ALREADY_CONFIRMED": "Emailul tau este deja confirmat.",
-        "EMAIL_CONFIRMED_SUCCESS": "Emailul tau a fost confirmat cu succes.",
-        "TOKEN_EXPIRED": "Tokenul tau este expirat. Ti-am trimis un nou token, te rugam sa iti verifici emailul pentru confirmare.",
-        "TOKEN_NOT_FOUND": "Tokenul nu a fost gasit."
+        "EMAIL_ALREADY_CONFIRMED": "Emailul tău este deja confirmat.",
+        "EMAIL_CONFIRMED_SUCCESS": "Emailul tău a fost confirmat cu succes.",
+        "TOKEN_EXPIRED": "Tokenul tău este expirat. Ți-am trimis un nou token, te rugăm să îți verifici emailul pentru confirmare.",
+        "TOKEN_NOT_FOUND": "Tokenul nu a fost găsit."
     },
-    "login": "Acum te poti autentifica."
+    "login": "Acum te poți autentifica."
 }

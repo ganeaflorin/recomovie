@@ -5,8 +5,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.htmlcleaner.HtmlCleaner;
 
-import java.net.URLDecoder;
-
 @Getter
 @Setter
 @NoArgsConstructor
@@ -31,12 +29,11 @@ public class RssItem {
             if (input.charAt(startIndex) == '&') {
                 endIndex = input.indexOf(";", startIndex);
                 if (endIndex != -1) {
-                    String asciiValue = input.substring(startIndex + 2, endIndex); // Skip "&#"
+                    String asciiValue = input.substring(startIndex + 2, endIndex);
                     try {
                         int decimalValue = Integer.parseInt(asciiValue);
                         output.append((char) decimalValue);
                     } catch (NumberFormatException e) {
-                        // Handle invalid ASCII value
                         output.append("?");
                     }
                     startIndex = endIndex + 1;
@@ -49,7 +46,6 @@ public class RssItem {
                 startIndex++;
             }
         }
-
         return output.toString();
     }
 }

@@ -6,13 +6,9 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
-@SpringBootApplication(exclude =  {DataSourceAutoConfiguration.class })
+@SpringBootApplication()
 
 public class MovieInfoServiceApplication {
-	@Bean
-	public RestTemplate getRestTemplate() {
-		return new RestTemplate();
-	}
 	public static void main(String[] args) {
 		SpringApplication.run(MovieInfoServiceApplication.class, args);
 	}

@@ -23,6 +23,7 @@ import static org.springframework.http.HttpStatus.CREATED;
 import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
 import static org.springframework.http.HttpStatus.OK;
 import static recomovie.playlistsservice.constants.StringConstants.BASE_URL;
+import static recomovie.playlistsservice.constants.StringConstants.DELETE_PLAYLIST_ERROR;
 import static recomovie.playlistsservice.constants.StringConstants.MOVIE_LIST_DETAILS_ENDPOINT;
 import static recomovie.playlistsservice.constants.StringConstants.PLAYLIST_SAVED_SUCCESS;
 
@@ -67,7 +68,7 @@ public class PlaylistService {
             movieRepository.deleteAllByPlaylistId(playlistId);
             return new ResponseEntity(ACCEPTED);
         } catch (Exception e) {
-            return new ResponseEntity<>("DELETE_PLAYLIST_ERROR", INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(DELETE_PLAYLIST_ERROR, INTERNAL_SERVER_ERROR);
         }
     }
 

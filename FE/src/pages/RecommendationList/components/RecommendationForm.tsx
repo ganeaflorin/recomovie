@@ -1,5 +1,5 @@
 import { Button, TextField, Tooltip, Typography } from '@mui/material';
-import React from 'react'
+import React, { ChangeEvent } from 'react'
 import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
 import { getRecommendationListTrigger, updateInput } from '../RecommendationListSlice';
@@ -49,7 +49,7 @@ const RecommendationForm = () => {
         dispatch(getRecommendationListTrigger())
     }
 
-    const changeInput = (e: any) => {
+    const changeInput = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { value } = e.target;
         dispatch(updateInput(value))
     }

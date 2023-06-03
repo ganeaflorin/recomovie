@@ -37,7 +37,6 @@ public class NewsFeedService {
                 if (count >= 20) {
                     break;
                 }
-
                 String title = entry.getTitle();
                 String description = entry.getDescription().getValue();
                 String imageUrl = entry.getEnclosures().isEmpty() ? "" : entry.getEnclosures().get(0).getUrl();

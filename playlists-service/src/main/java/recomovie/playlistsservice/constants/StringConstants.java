@@ -2,7 +2,7 @@ package recomovie.playlistsservice.constants;
 
 public interface StringConstants {
     String PLAYLIST_SAVED_SUCCESS = "PLAYLIST_SAVED_SUCCESS";
-    String BASE_URL ="http://localhost:8080";
-
+    String BASE_URL = "http://localhost:8080";
     String MOVIE_LIST_DETAILS_ENDPOINT = "/movies/movieList";
+    String DELETE_PLAYLIST_ERROR = "DELETE_PLAYLIST_ERROR";
 }

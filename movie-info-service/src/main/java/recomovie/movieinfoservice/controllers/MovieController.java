@@ -1,4 +1,4 @@
-package recomovie.movieinfoservice.resources;
+package recomovie.movieinfoservice.controllers;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,7 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/movies")
 @AllArgsConstructor
-public class MovieResource {
+public class MovieController {
     private final MovieService movieService;
 
     @RequestMapping("/{id}")
@@ -26,6 +26,7 @@ public class MovieResource {
     public List<Movie> getMovieListInfo(@RequestParam List<Long> movieIds) {
         List<Movie> movieList = new ArrayList<>();
         for (Long movieId : movieIds) {
+            movieService.getMovieInfo(movieId);
             movieList.add(movieService.getMovieInfo(movieId));
         }
         return movieList;

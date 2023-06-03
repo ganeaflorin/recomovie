@@ -36,7 +36,7 @@ export const loginSlice = createSlice({
             state.isLoading = true;
         },
         loginSuccess: (state, action) => {
-            const { preferredLanguage, preferredThemeMode } = state.user;
+            const { preferredLanguage, preferredThemeMode } = { ...state.user };
             state.user = { ...action.payload, preferredLanguage, preferredThemeMode };
             state.user.isAuthenticated = true;
             state.isLoading = false;

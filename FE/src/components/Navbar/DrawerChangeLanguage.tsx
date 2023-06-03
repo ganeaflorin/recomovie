@@ -34,7 +34,7 @@ const DrawerChangeLanguage = () => {
     const preferredLanguage = useSelector(getPreferredLanguage);
     const { classes } = useStyles();
 
-    const handleLanguageChange = (e: any) => {
+    const handleLanguageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { value } = e.target;
         dispatch(updatePreferredLanguage(value));
         i18n.changeLanguage(value);

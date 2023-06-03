@@ -1,7 +1,6 @@
 package recomovie.userservice.constants;
 
 public interface ErrorConstants {
-
     String EMAIL_ALREADY_CONFIRMED = "EMAIL_ALREADY_CONFIRMED";
     String EMAIL_CONFIRMED_SUCCESS = "EMAIL_CONFIRMED_SUCCESS";
     String EMAIL_FAIL_TO_SEND = "EMAIL_FAIL_TO_SEND";
@@ -13,5 +12,4 @@ public interface ErrorConstants {
     String LOGIN_INVALID_CREDENTIALS = "LOGIN_INVALID_CREDENTIALS";
     String ACCOUNT_NOT_CONFIRMED = "ACCOUNT_NOT_CONFIRMED";
     String USER_NOT_FOUND = "USER_NOT_FOUND";
-
 }

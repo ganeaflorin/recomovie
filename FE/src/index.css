@@ -10,13 +10,13 @@ body {
     box-sizing: border-box;
   }
 }
-
+.MuiAutocomplete-root {
+  .MuiOutlinedInput-notchedOutline {
+    border: 1px solid white !important;
+  }
+}
 .MuiAutocomplete-noOptions {
   display: none;
-}
-
-.MuiOutlinedInput-notchedOutline {
-  border: 1px solid white !important;
 }
 
 code {

@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUsers } from '../../pages/Users/selectors';
 import { clearUsers, getUsersTrigger } from '../../pages/Users/UserSlice';
+import { User } from '../../entities/common';
 
 const useStyles = makeStyles()((theme) => ({
     autocomplete: {
@@ -44,7 +45,7 @@ const UserSearch = () => {
         }
     }
 
-    const handleChange = (_: any, option: any) => {
+    const handleChange = (_: any, option: User | null) => {
         if (option) {
             navigate(`${paths.profile}/${option?.id}`);
         }
@@ -53,7 +54,6 @@ const UserSearch = () => {
     return (
         <Autocomplete
             className={classes.autocomplete}
-            // isOptionEqualToValue={(option: any, value: any) => option.id === value.id}
             onChange={handleChange}
             options={users}
             renderInput={(params) => <TextField {...params} label={t('searchFriend')} />}

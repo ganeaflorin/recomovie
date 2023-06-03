@@ -1,4 +1,4 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import { PayloadAction, combineReducers, configureStore } from '@reduxjs/toolkit';
 import recommendationListReducer from './pages/RecommendationList/RecommendationListSlice';
 import signUpReducer from './pages/SignUp/SignUpSlice';
 import loginReducer, { logoutTrigger } from './pages/Login/LoginSlice';
@@ -42,7 +42,7 @@ const reducers = {
 
 const appReducer = combineReducers(reducers);
 
-const rootReducer = (state: any, action: any) => {
+const rootReducer = (state: any, action: PayloadAction) => {
     if (action.type === logoutTrigger.type) {
         state = undefined;
         localStorage.clear();
@@ -72,4 +72,3 @@ export const persistor = persistStore(store);
 ].forEach(saga => sagaMiddleware.run(saga));
 
 export type RootState = ReturnType<typeof store.getState>
-export type AppDispatch = typeof store.dispatch

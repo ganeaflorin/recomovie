@@ -1,24 +1,24 @@
 {
   "languages": {
-    "en": "Engleza",
-    "ro": "Romana"
+    "en": "Engleză",
+    "ro": "Română"
   },
   "themeModes": {
-    "dark": "Intunecat",
+    "dark": "Întunecat",
     "light": "Deschis"
   },
-  "loading": "Se incarca",
+  "loading": "Se încarcă",
   "navbar": {
-    "home": "Acasa",
-    "recommendations": "Recomandari",
+    "home": "Acasă",
+    "recommendations": "Recomandări",
     "playlists": "Listele mele",
     "friends": "Prieteni",
-    "login": "Conecteaza-te",
-    "logout": "Deconecteaza-te",
-    "changeLanguage": "Schimba limba",
-    "themeMode": "Tema aplicatiei"
+    "login": "Conectează-te",
+    "logout": "Deconectează-te",
+    "changeLanguage": "Schimbă limba",
+    "themeMode": "Tema aplicației"
   },
   "footer": "Florin Ganea © 2023",
-  "forbidden": "Nu ai permisiunea de a accesa aceasta pagina.",
-  "searchFriend": "Cauta un prieten"
+  "forbidden": "Nu ai permisiunea de a accesa această pagină.",
+  "searchFriend": "Caută un prieten"
 }

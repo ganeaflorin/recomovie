@@ -1,9 +1,7 @@
 import { getRecommendationListFailure, getRecommendationListSuccess, getRecommendationListTrigger, savePlaylistFailure, savePlaylistSuccess, savePlaylistTrigger } from "./RecommendationListSlice";
 import getRecommendation, { savePlaylist } from "./api";
 import { call, put, select, takeLatest } from 'redux-saga/effects'
-import { getInput, getMoviesIds, getPlaylistData } from './selectors';
-import { MovieDetails } from "../../entities/recommendationList";
-import { getUserId } from "../Login/selectors";
+import { getInput } from './selectors';
 import { PayloadAction } from "@reduxjs/toolkit";
 
 export function* getRecommendationListAsync() {

@@ -22,7 +22,7 @@ export function* getFriendListAsync(action: PayloadAction) {
     }
 }
 
-export function* updateFriendStatusAsync(action: PayloadAction<any>) {
+export function* updateFriendStatusAsync(action: PayloadAction) {
     const { response, error } = yield call(
         updateFriendsStatus,
         action.payload

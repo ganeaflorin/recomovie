@@ -1,7 +1,7 @@
 {
-    "noPlaylists": "Momentam nu ai salvat nicio lista. Ce mai astepti? Poti naviga in sectiunea Recomandari pentru a descoperi noi filme.",
-    "friendNoPlaylists": "Prietenul tau {{friendName}} nu are nicio lista salvata momentan.",
+    "noPlaylists": "Momentam nu ai salvat nicio lista. Ce mai aștepți? Poți naviga în secțiunea Recomandări pentru a descoperi noi filme.",
+    "friendNoPlaylists": "Prietenul tău {{friendName}} nu are nicio listă salvată momentan.",
     "playlistsOfFriend": "Listele lui {{friendName}}",
-    "deletePlaylist": "Sterge Lista",
-    "savePlaylist": "Salveaza lista"
+    "deletePlaylist": "Șterge lista",
+    "savePlaylist": "Salvează lista"
 }

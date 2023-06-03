@@ -1,11 +1,11 @@
 {
-    "viewPlaylistsForbidden": "Doar prietenii isi pot vizualiza listele.",
-    "removeFriend": "Sterge prietenul",
+    "viewPlaylistsForbidden": "Doar prietenii își pot vizualiza listele.",
+    "removeFriend": "Șterge prietenul",
     "addFriend": "Trimite cerere",
-    "cancelFriend": "Anuleaza cererea",
-    "acceptFriend": "Accepta cererea",
-    "declineFriend": "Refuza cererea",
+    "cancelFriend": "Anulează cererea",
+    "acceptFriend": "Acceptă cererea",
+    "declineFriend": "Refuză cererea",
     "errors": {
-        "USER_NOT_FOUND": "This user does not exist."
+        "USER_NOT_FOUND": "Acest utilizator nu există."
     }
 }

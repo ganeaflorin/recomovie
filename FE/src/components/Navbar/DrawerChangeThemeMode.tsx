@@ -1,7 +1,6 @@
 import { Typography, FormControl, RadioGroup, FormControlLabel, Radio } from '@mui/material';
-import { t } from 'i18next';
 import React from 'react'
-import { Languages, ThemeModes } from '../../entities/common';
+import { ThemeModes } from '../../entities/common';
 import { useTranslation } from 'react-i18next';
 import { useSelector, useDispatch } from 'react-redux';
 import { getPreferredThemeMode } from '../../pages/Login/selectors';
@@ -36,9 +35,10 @@ const DrawerChangeThemeMode = () => {
     const dispatch = useDispatch();
 
 
-    const handleThemeModeChange = (e: any) => {
+    const handleThemeModeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { value } = e.target;
         dispatch(updatePreferredThemeMode(value));
+        // window.location.reload();
     }
 
     return (

@@ -8,11 +8,15 @@ import { store, persistor } from './store';
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react';
 import ThemeProviderWrapper from './ThemeProviderWrapper';
+import { Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 
 function App() {
+  const { t } = useTranslation('common');
+
   return (
-    <Suspense fallback="...is loading">
+    <Suspense fallback={<Typography>{t('loading')}</Typography>}>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <ThemeProviderWrapper>

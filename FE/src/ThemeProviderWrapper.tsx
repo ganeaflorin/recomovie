@@ -1,15 +1,14 @@
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
-import React from 'react'
+import React, { useMemo } from 'react'
 import { useSelector } from 'react-redux';
 import { getPreferredThemeMode } from './pages/Login/selectors';
 import { ThemeModes } from './entities/common';
 import { deepPurple, } from '@mui/material/colors';
 
-const ThemeProviderWrapper = ({ children }: { children: any }) => {
+const ThemeProviderWrapper = ({ children }: { children: React.ReactNode }) => {
     const preferredThemeMode = useSelector(getPreferredThemeMode);
-    console.log("🚀 ~ file: ThemeProviderWrapper.tsx:10 ~ ThemeProviderWrapper ~ preferredThemeMode:", preferredThemeMode)
 
-    const theme = React.useMemo(
+    const theme = useMemo(
         () =>
             createTheme({
                 palette: {

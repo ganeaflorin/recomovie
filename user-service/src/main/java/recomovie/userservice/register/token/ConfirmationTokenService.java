@@ -12,7 +12,7 @@ import java.util.UUID;
 public class ConfirmationTokenService {
     @Value("${token.expiration.time}")
     public Integer TOKEN_EXPIRATION_TIME;
-    private ConfirmationTokenRepository confirmationTokenRepository;
+    private final ConfirmationTokenRepository confirmationTokenRepository;
 
     public ConfirmationTokenService(ConfirmationTokenRepository confirmationTokenRepository) {
         this.confirmationTokenRepository = confirmationTokenRepository;

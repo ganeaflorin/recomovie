@@ -73,8 +73,6 @@ def create_content_profile_for_file(file, is_present_flags):
     if is_present_flags['directors']:
         directors_tfidf = get_tfidf(tfidf_directors, film_data, 'directors', feature_weights["directors"])
         content_profile.append(directors_tfidf)
-    # film_data['voteAverage'] = normalize(scaler_vote_average, film_data['voteAverage'], is_fit_transform) * feature_weights["voteAverage"]
-    # film_data['voteCount'] = normalize(scaler_vote_count, film_data['voteCount'], is_fit_transform) * feature_weights["voteCount"]
     return pd.concat([film_data['id'], film_data['title']], axis=1), pd.concat(
         content_profile, axis=1)
 
@@ -97,8 +95,6 @@ def create_content_profile_for_input(user_input, is_present_flags):
     if is_present_flags['directors']:
         directors_tfidf = get_tfidf_transform(tfidf_directors, film_data, 'directors', feature_weights["directors"])
         content_profile.append(directors_tfidf)
-    # film_data['voteAverage'] = normalize(scaler_vote_average, film_data['voteAverage'], False) * feature_weights["voteAverage"]
-    # film_data['voteCount'] = normalize(scaler_vote_count, film_data['voteCount'], False) * feature_weights["voteCount"]
     return pd.concat(content_profile, axis=1)
 
 
@@ -111,7 +107,6 @@ def get_similar_movies(user_input):
     is_present_flags = get_is_present_flags(user_input)
     dataset_meta_info, dataset_profile = create_content_profile_for_file('C:\\Users\\andre\\Downloads\\recomovie\\movie_recommender_service\\movie_recommender_service\\resources\\movie_dataset.csv',
                                                                          is_present_flags)
-    print(user_input)
     input_profile = create_content_profile_for_input(user_input, is_present_flags)
     dataset_length = len(dataset_profile.index)
     similarities = []

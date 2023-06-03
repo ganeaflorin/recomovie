@@ -72,13 +72,13 @@ const Profile = () => {
     }
 
 
-    const handleLanguageChange = (e: any) => {
+    const handleLanguageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { value } = e.target;
         dispatch(updatePreferredLanguage(value));
         i18n.changeLanguage(value);
     }
 
-    const handleThemeModeChange = (e: any) => {
+    const handleThemeModeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { value } = e.target;
         dispatch(updatePreferredThemeMode(value));
     }

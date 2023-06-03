@@ -1,9 +1,5 @@
 package recomovie.movieinfoservice.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.SequenceGenerator;
-import jakarta.persistence.Table;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,27 +9,13 @@ import lombok.Setter;
 @Setter
 @EqualsAndHashCode
 @NoArgsConstructor
-@Entity
-@Table(name = "actors")
 public class Actor {
-    @SequenceGenerator(name = "actor_sequence", sequenceName = "actor_sequence", allocationSize = 1)
-    @Id
-    private String id;
     private String movieId;
     private String name;
 
-    public Actor(String id, String movieId, String name) {
-        this.id = id;
+    public Actor(String movieId, String name) {
         this.movieId = movieId;
         this.name = name;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getMovieId() {
