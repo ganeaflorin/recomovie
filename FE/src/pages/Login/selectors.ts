@@ -32,3 +32,8 @@ export const getPreferredLanguage = createSelector(
     [getRoot],
     (login) => login.user.preferredLanguage,
 );
+
+export const getPreferredThemeMode = createSelector(
+    [getRoot],
+    (login) => login.user.preferredThemeMode,
+);

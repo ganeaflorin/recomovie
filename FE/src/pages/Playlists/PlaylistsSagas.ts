@@ -30,7 +30,6 @@ export function* deletePlaylistAsync(action: PayloadAction) {
         action.payload
     );
     if (response) {
-        console.log("🚀 ~ file: PlaylistsSagas.ts:29 ~ function*deletePlaylistAsync ~ response:", response)
         yield put({
             type: deletePlaylistSuccess.type,
             payload: response,

@@ -3,13 +3,22 @@
     "en": "English",
     "ro": "Romanian"
   },
+  "themeModes": {
+    "dark": "Dark",
+    "light": "Light"
+  },
   "loading": "Loading",
   "navbar": {
+    "home": "Home",
     "recommendations": "Recommendations",
     "playlists": "Playlists",
+    "friends": "Friends",
     "login": "Login",
     "changeLanguage": "Change language",
+    "themeMode": "Theme mode",
     "logout": "Logout"
   },
-  "footer": "Florin Ganea © 2023"
+  "footer": "Florin Ganea © 2023",
+  "forbidden": "You are not allowed to access this page.",
+  "searchFriend": "Search for a friend"
 }

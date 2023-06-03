@@ -6,7 +6,8 @@ import { useTranslation } from 'react-i18next';
 import { makeStyles } from 'tss-react/mui';
 import { LoadingButton } from '@mui/lab';
 import CheckIcon from '@mui/icons-material/Check';
-import { getPlaylistData } from '../selectors';
+import { getInput, getMoviesIds, getPlaylistData } from '../selectors';
+import { getUserId } from '../../Login/selectors';
 
 const useStyles = makeStyles()((theme) => ({
     playlistContainer: {
@@ -32,13 +33,18 @@ const PlaylistForm = () => {
     const { t } = useTranslation('recommendations');
     const { classes } = useStyles();
     const { isLoading, isSaved } = useSelector(getPlaylistData);
+    const movies: string[] = useSelector(getMoviesIds);
+    const { name } = useSelector(getPlaylistData);
+    const userInput: string = useSelector(getInput);
+    const userId: string = useSelector(getUserId);
+
     const handleChange = (e: any) => {
         const { value } = e.target;
         dispatch(updatePlaylistName(value));
     }
 
     const handleSubmit = () => {
-        dispatch(savePlaylistTrigger());
+        dispatch(savePlaylistTrigger({ movies, name, userInput, userId }));
     }
 
     const handleClear = () => {

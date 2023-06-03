@@ -6,6 +6,9 @@ import Loader from '../../components/Loader';
 import Typography from '@mui/material/Typography';
 import { useTranslation } from 'react-i18next';
 import { makeStyles } from 'tss-react/mui';
+import { ConfirmationTokenStatuses } from '../../entities/signUp';
+import { Link } from 'react-router-dom';
+import paths from '../../common/paths';
 
 const useStyles = makeStyles()((theme) => ({
     container: {
@@ -37,7 +40,14 @@ const ConfirmationToken = () => {
     return (
         <Loader condition={isLoading}>
             <div className={classes.container}>
-                <Typography>{t(`confirmationStatus.${confirmationStatus}`)}</Typography>
+                <Typography variant="h5">{t(`confirmationStatus.${confirmationStatus}`)}</Typography>
+                {confirmationStatus === ConfirmationTokenStatuses.EMAIL_CONFIRMED_SUCCESS &&
+                    <Link to={paths.login}>
+                        <Typography variant="h5">
+                            {t('login')}
+                        </Typography>
+                    </Link>
+                }
             </div>
         </Loader>
     )

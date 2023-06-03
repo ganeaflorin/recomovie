@@ -7,13 +7,17 @@ import { Typography } from '@mui/material';
 import { makeStyles } from 'tss-react/mui';
 import Loader from '../../components/Loader';
 import { useTranslation } from 'react-i18next';
+import { useParams } from 'react-router-dom';
+import { getFriendListTrigger } from '../Friends/FriendsSlice';
+import { getFriendUsername } from '../Friends/selectors';
 import Playlist from '../../components/Playlist';
+import { v4 as uuidv4 } from 'uuid';
 
 const useStyles = makeStyles()((theme) => ({
     noPlaylists: {
-        marginTop: '200px',
+        marginTop: '100px',
         textAlign: 'center',
-    }
+    },
 }));
 
 const Playlists = () => {
@@ -25,10 +29,15 @@ const Playlists = () => {
     const userId = useSelector(getUserId);
     const isLoading = useSelector(getIsLoading);
     const isDeleted = useSelector(getIsDeleted);
+    const { userId: friendId } = useParams();
+    const friendName = useSelector(getFriendUsername(friendId));
 
     useEffect(() => {
-        dispatch(getPlaylistsTrigger({ userId }))
-    }, [dispatch, userId]);
+        dispatch(getPlaylistsTrigger({ userId: friendId || userId }));
+        if (friendId) {
+            dispatch(getFriendListTrigger({ id: userId }))
+        }
+    }, [dispatch, userId, friendId]);
 
     useEffect(() => {
         if (isDeleted) {
@@ -41,12 +50,13 @@ const Playlists = () => {
         dispatch(deletePlaylistTrigger({ playlistId }));
     };
 
-
     return (
         <Loader condition={isLoading}>
-            {playlists.length === 0 && <Typography variant='h4' className={classes.noPlaylists}>{t('noPlaylists')}</Typography>}
+            {playlists.length === 0 &&
+                ((friendId && friendId !== String(userId)) ? <Typography variant='h5' className={classes.noPlaylists}>{t('friendNoPlaylists', { friendName })}</Typography>
+                    : <Typography variant='h5' className={classes.noPlaylists}>{t('noPlaylists')}</Typography>)}
             {playlists.length > 0 && playlists.map((playlist, index) =>
-                <Playlist playlist={playlist} handleDelete={handleDelete} borderCondition={index !== playlists.length - 1} marginCondition={index === 0} />
+                <Playlist playlist={playlist} key={uuidv4()} canDelete={friendId === undefined} handleDelete={handleDelete} borderCondition={index !== playlists.length - 1} marginCondition={index === 0} />
             )}
         </Loader>
     )

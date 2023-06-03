@@ -10,17 +10,34 @@ const useStyles = makeStyles()((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         maxWidth: '500px',
+        alignItems: 'center',
+        [theme.breakpoints.down('sm')]: {
+            width: '90vw',
+            marginBottom: '60px'
+        },
     },
     inputField: {
         width: '500px',
         marginTop: '20px',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+        },
     },
     submitButton: {
         marginTop: '20px',
+        width: '100%'
     },
     example: {
         alignSelf: 'end',
+        [theme.breakpoints.down('sm')]: {
+            alignSelf: 'center',
+        },
     },
+    instructions: {
+        [theme.breakpoints.down('sm')]: {
+            padding: '0 8px',
+        },
+    }
 }));
 
 const RecommendationForm = () => {
@@ -38,18 +55,15 @@ const RecommendationForm = () => {
     }
 
     return (
-        <>
-            {
-                <div className={classes.container}>
-                    <Typography>{t('instructions')}</Typography>
-                    <TextField onChange={changeInput} className={classes.inputField} label={t('input.label')} multiline rows={7}></TextField>
-                    <Tooltip className={classes.example} title={t('example')} placement='right-start'>
-                        <Button>{t('hoverExample')}</Button>
-                    </Tooltip>
-                    <Button variant="contained" className={classes.submitButton} onClick={handleSubmit}>{t('submitButton')}</Button>
-                </div>
-            }
-        </>)
+        <div className={classes.container}>
+            <Typography className={classes.instructions}>{t('instructions')}</Typography>
+            <TextField onChange={changeInput} className={classes.inputField} label={t('input.label')} multiline rows={7}></TextField>
+            <Tooltip className={classes.example} title={<Typography variant="body1">{t('example')}</Typography>} placement='right-start'>
+                <Button>{t('hoverExample')}</Button>
+            </Tooltip>
+            <Button variant="contained" className={classes.submitButton} onClick={handleSubmit}>{t('submitButton')}</Button>
+        </div>
+    )
 }
 
 export default RecommendationForm;

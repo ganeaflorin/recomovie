@@ -54,7 +54,7 @@ const Login = () => {
 
     useEffect(() => {
         if (isAuthenticated) {
-            navigate(paths.home)
+            navigate(paths.home);
         }
     }, [isAuthenticated, navigate])
 

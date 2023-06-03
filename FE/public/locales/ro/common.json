@@ -3,13 +3,22 @@
     "en": "Engleza",
     "ro": "Romana"
   },
+  "themeModes": {
+    "dark": "Intunecat",
+    "light": "Deschis"
+  },
   "loading": "Se incarca",
   "navbar": {
+    "home": "Acasa",
     "recommendations": "Recomandari",
     "playlists": "Listele mele",
+    "friends": "Prieteni",
     "login": "Conecteaza-te",
     "logout": "Deconecteaza-te",
-    "changeLanguage": "Schimba limba"
+    "changeLanguage": "Schimba limba",
+    "themeMode": "Tema aplicatiei"
   },
-  "footer": "Florin Ganea © 2023"
+  "footer": "Florin Ganea © 2023",
+  "forbidden": "Nu ai permisiunea de a accesa aceasta pagina.",
+  "searchFriend": "Cauta un prieten"
 }

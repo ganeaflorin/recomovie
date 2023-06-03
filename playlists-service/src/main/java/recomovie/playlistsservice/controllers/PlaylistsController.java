@@ -39,7 +39,6 @@ public class PlaylistsController {
 
     @DeleteMapping
     public ResponseEntity deletePlaylist(@RequestBody PlaylistId playlistId) {
-        System.out.println("BAAAAAAA\n\n\nAAAA:" + playlistId.getPlaylistId());
         return playlistService.deletePlaylist(playlistId.getPlaylistId());
     }
 

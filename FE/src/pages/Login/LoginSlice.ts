@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { LoginState } from '../../entities/login';
-import { Languages } from '../../entities/common';
+import { Languages, ThemeModes } from '../../entities/common';
 
 
 const initialState: LoginState = {
@@ -13,6 +13,7 @@ const initialState: LoginState = {
         username: "",
         isAuthenticated: false,
         preferredLanguage: Languages.en,
+        preferredThemeMode: ThemeModes.light,
     },
     isLoading: false,
     error: undefined,
@@ -28,12 +29,15 @@ export const loginSlice = createSlice({
         updatePreferredLanguage: (state, action) => {
             state.user.preferredLanguage = action.payload;
         },
+        updatePreferredThemeMode: (state, action) => {
+            state.user.preferredThemeMode = action.payload;
+        },
         loginTrigger: (state) => {
             state.isLoading = true;
         },
         loginSuccess: (state, action) => {
-            const { preferredLanguage } = state.user;
-            state.user = { ...action.payload, preferredLanguage };
+            const { preferredLanguage, preferredThemeMode } = state.user;
+            state.user = { ...action.payload, preferredLanguage, preferredThemeMode };
             state.user.isAuthenticated = true;
             state.isLoading = false;
         },
@@ -47,6 +51,6 @@ export const loginSlice = createSlice({
     },
 })
 
-export const { updateField, updatePreferredLanguage, loginTrigger, loginSuccess, loginFailure, logoutTrigger } = loginSlice.actions
+export const { updateField, updatePreferredLanguage, loginTrigger, loginSuccess, loginFailure, logoutTrigger, updatePreferredThemeMode } = loginSlice.actions
 
 export default loginSlice.reducer

@@ -11,6 +11,14 @@ body {
   }
 }
 
+.MuiAutocomplete-noOptions {
+  display: none;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border: 1px solid white !important;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

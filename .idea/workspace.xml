@@ -5,32 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb382d6f-1c35-4f4f-a983-c05146d3783d" name="Changes" comment="fix: #6 - add services for nlp, recommendations, and service connecting these 2 leftovers">
-      <change afterPath="$PROJECT_DIR$/movie-info-service/src/main/java/recomovie/movieinfoservice/models/Actor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-info-service/src/main/java/recomovie/movieinfoservice/models/Credits.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-info-service/src/main/java/recomovie/movieinfoservice/models/Genre.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-info-service/src/main/java/recomovie/movieinfoservice/models/MovieRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-info-service/src/main/java/recomovie/movieinfoservice/models/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-info-service/src/main/java/recomovie/movieinfoservice/services/MovieService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/playlists-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/playlists-service/src/main/java/recomovie/playlistsservice/PlaylistServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/playlists-service/src/main/java/recomovie/playlistsservice/constants/StringConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/playlists-service/src/main/java/recomovie/playlistsservice/controllers/PlaylistsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/playlists-service/src/main/java/recomovie/playlistsservice/models/Movie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/playlists-service/src/main/java/recomovie/playlistsservice/models/MovieInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/playlists-service/src/main/java/recomovie/playlistsservice/models/MovieRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/playlists-service/src/main/java/recomovie/playlistsservice/models/Playlist.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/playlists-service/src/main/java/recomovie/playlistsservice/models/PlaylistRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/playlists-service/src/main/java/recomovie/playlistsservice/request/PlaylistId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/playlists-service/src/main/java/recomovie/playlistsservice/request/PlaylistRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/playlists-service/src/main/java/recomovie/playlistsservice/request/UserPlaylist.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/playlists-service/src/main/java/recomovie/playlistsservice/services/PlaylistService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/playlists-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recommendation-system-service/src/main/java/recomovie/recommendationsystemservice/constants/ErrorConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recommendation-system-service/src/main/java/recomovie/recommendationsystemservice/models/MovieDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/login/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/login/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/login/LoginService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/user/LoggedUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friends-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friends-service/src/main/java/recomovie/friendsservice/FriendsServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friends-service/src/main/java/recomovie/friendsservice/constants/StringConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friends-service/src/main/java/recomovie/friendsservice/controllers/FriendsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friends-service/src/main/java/recomovie/friendsservice/models/Friend.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friends-service/src/main/java/recomovie/friendsservice/models/UsersFriendship.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friends-service/src/main/java/recomovie/friendsservice/models/UsersFriendshipRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friends-service/src/main/java/recomovie/friendsservice/request/FriendListRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friends-service/src/main/java/recomovie/friendsservice/request/FriendRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friends-service/src/main/java/recomovie/friendsservice/request/UpdateFriendRequestStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friends-service/src/main/java/recomovie/friendsservice/services/FriendsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friends-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-feed-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-feed-service/src/main/java/recomovie/newsfeedservice/NewsFeedServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-feed-service/src/main/java/recomovie/newsfeedservice/constants/ErrorConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-feed-service/src/main/java/recomovie/newsfeedservice/constants/StringConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-feed-service/src/main/java/recomovie/newsfeedservice/controllers/NewsFeedController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-feed-service/src/main/java/recomovie/newsfeedservice/models/RssItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-feed-service/src/main/java/recomovie/newsfeedservice/services/NewsFeedService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-feed-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/user/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/c166fb6c-8600-45e6-af4d-1d564dea6964.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c166fb6c-8600-45e6-af4d-1d564dea6964.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/c166fb6c-8600-45e6-af4d-1d564dea6964/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c166fb6c-8600-45e6-af4d-1d564dea6964/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
@@ -40,45 +35,42 @@
       <change beforePath="$PROJECT_DIR$/FE/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/FE/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FE/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/FE/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FE/public/locales/en/common.json" beforeDir="false" afterPath="$PROJECT_DIR$/FE/public/locales/en/common.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/public/locales/en/signUp.json" beforeDir="false" afterPath="$PROJECT_DIR$/FE/public/locales/en/signUp.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/public/locales/en/playlists.json" beforeDir="false" afterPath="$PROJECT_DIR$/FE/public/locales/en/playlists.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FE/public/locales/ro/common.json" beforeDir="false" afterPath="$PROJECT_DIR$/FE/public/locales/ro/common.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/public/locales/ro/playlists.json" beforeDir="false" afterPath="$PROJECT_DIR$/FE/public/locales/ro/playlists.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FE/src/common/endpoints.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/common/endpoints.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FE/src/common/paths.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/common/paths.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/entities/signUp.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/entities/signUp.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/src/components/Layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/components/Layout/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/src/components/Movie/Movie.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/components/Movie/Movie.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/src/components/MovieList/MovieList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/components/MovieList/MovieList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/src/components/Navbar/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/components/Navbar/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/src/components/Navbar/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/components/Navbar/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/src/components/Playlist/Playlist.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/components/Playlist/Playlist.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/src/entities/common.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/entities/common.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/src/entities/playlists.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/entities/playlists.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FE/src/http/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/http/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FE/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/src/pages/Home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/pages/Home/Home.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FE/src/pages/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/pages/Login/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/pages/RecommendationList/RecommendationList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/pages/RecommendationList/RecommendationList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/src/pages/Login/LoginSagas.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/pages/Login/LoginSagas.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/src/pages/Playlists/Playlists.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/pages/Playlists/Playlists.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/src/pages/Playlists/PlaylistsSagas.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/pages/Playlists/PlaylistsSagas.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/src/pages/Playlists/PlaylistsSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/pages/Playlists/PlaylistsSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/src/pages/Playlists/selectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/pages/Playlists/selectors.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FE/src/pages/RecommendationList/RecommendationListSagas.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/pages/RecommendationList/RecommendationListSagas.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FE/src/pages/RecommendationList/RecommendationListSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/pages/RecommendationList/RecommendationListSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/pages/RecommendationList/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/pages/RecommendationList/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/pages/RecommendationList/selectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/pages/RecommendationList/selectors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/src/pages/RecommendationList/components/PlaylistForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/pages/RecommendationList/components/PlaylistForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FE/src/pages/SignUp/SignUp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/pages/SignUp/SignUp.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/pages/SignUp/SignUpSagas.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/pages/SignUp/SignUpSagas.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/pages/SignUp/SignUpSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/pages/SignUp/SignUpSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/pages/SignUp/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/pages/SignUp/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/pages/SignUp/selectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/pages/SignUp/selectors.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FE/src/router.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/router.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FE/src/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-info-service/src/main/java/recomovie/movieinfoservice/constants/StringConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-info-service/src/main/java/recomovie/movieinfoservice/constants/StringConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-info-service/src/main/java/recomovie/movieinfoservice/models/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-info-service/src/main/java/recomovie/movieinfoservice/models/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-info-service/src/main/java/recomovie/movieinfoservice/models/MovieSummary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-info-service/src/main/java/recomovie/movieinfoservice/resources/MovieResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-info-service/src/main/java/recomovie/movieinfoservice/resources/MovieResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-info-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/movie-info-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_recommender_service/movie_recommender_service/api/models/get_similar_movies.py" beforeDir="false" afterPath="$PROJECT_DIR$/movie_recommender_service/movie_recommender_service/api/models/get_similar_movies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation-system-service/src/main/java/recomovie/recommendationsystemservice/models/MovieRecommendation.java" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation-system-service/src/main/java/recomovie/recommendationsystemservice/models/MovieRecommendation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation-system-service/src/main/java/recomovie/recommendationsystemservice/resources/RecommendationSystemResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation-system-service/src/main/java/recomovie/recommendationsystemservice/resources/RecommendationSystemResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation-system-service/src/main/java/recomovie/recommendationsystemservice/utils/StringConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation-system-service/src/main/java/recomovie/recommendationsystemservice/constants/StringConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playlists-service/src/main/java/recomovie/playlistsservice/controllers/PlaylistsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/playlists-service/src/main/java/recomovie/playlistsservice/controllers/PlaylistsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/constants/ErrorConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/constants/ErrorConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/register/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/register/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/register/RegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/register/RegisterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/security/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/security/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/login/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/login/LoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/user/LoggedUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/user/UserInfoResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/user/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/user/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/recomovie/userservice/user/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,8 +81,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -117,6 +109,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
@@ -135,18 +128,18 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "extract.method.default.visibility": "private",
     "jdk.selected.JAVA_MODULE": "corretto-17",
-    "last_opened_file_path": "C:/Users/andre/Downloads/recomovie/user-service",
+    "last_opened_file_path": "C:/Users/andre/Downloads/recomovie",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "spring.configuration.checksum": "4bd753156e675880a050388950342b4d",
+    "spring.configuration.checksum": "fb90a15f34f6e70528e77d8f3b8eeb7c",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -173,11 +166,11 @@
   <component name="RunManager" selected="Compound.Recomovie">
     <configuration name="Recomovie" type="CompoundRunConfigurationType">
       <toRun name="DiscoveryServerApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="FriendsServiceApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="GatewayApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="MovieCatalogServiceApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="MovieInfoServiceApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="NewsFeedServiceApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="PlaylistServiceApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="RatingsDataServiceApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="RecommendationSystemServiceApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="UserServiceApplication" type="SpringBootApplicationConfigurationType" />
       <method v="2" />
@@ -189,6 +182,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FriendsServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="friends-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="recomovie.friendsservice.FriendsServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="recomovie.friendsservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="recomovie.gateway.GatewayApplication" />
@@ -196,16 +202,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MovieCatalogServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="movie-catalog-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="recomovie.moviecatalogservice.MovieCatalogServiceApplication" />
+    <configuration name="MovieInfoServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="movie-info-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="recomovie.movieinfoservice.MovieInfoServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MovieInfoServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="movie-info-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="recomovie.movieinfoservice.MovieInfoServiceApplication" />
+    <configuration name="NewsFeedServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="news-feed-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="recomovie.newsfeedservice.NewsFeedServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="recomovie.newsfeedservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -219,13 +231,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RatingsDataServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="ratings-data-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="recomovie.ratingsdataservice.RatingsDataServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -258,14 +263,14 @@
     </configuration>
     <list>
       <item itemvalue="Compound.Recomovie" />
+      <item itemvalue="Spring Boot.UserServiceApplication" />
+      <item itemvalue="Spring Boot.FriendsServiceApplication" />
       <item itemvalue="Spring Boot.GatewayApplication" />
       <item itemvalue="Spring Boot.DiscoveryServerApplication" />
-      <item itemvalue="Spring Boot.MovieCatalogServiceApplication" />
       <item itemvalue="Spring Boot.MovieInfoServiceApplication" />
-      <item itemvalue="Spring Boot.RatingsDataServiceApplication" />
-      <item itemvalue="Spring Boot.UserServiceApplication" />
       <item itemvalue="Spring Boot.RecommendationSystemServiceApplication" />
       <item itemvalue="Spring Boot.PlaylistServiceApplication" />
+      <item itemvalue="Spring Boot.NewsFeedServiceApplication" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -312,7 +317,19 @@
       <workItem from="1684066537026" duration="23056000" />
       <workItem from="1684166964815" duration="6675000" />
       <workItem from="1684251549340" duration="10053000" />
-      <workItem from="1684513904362" duration="5544000" />
+      <workItem from="1684513904362" duration="5554000" />
+      <workItem from="1684577631383" duration="1883000" />
+      <workItem from="1684600846699" duration="1569000" />
+      <workItem from="1684602423352" duration="6953000" />
+      <workItem from="1684781306890" duration="5654000" />
+      <workItem from="1684858876632" duration="6676000" />
+      <workItem from="1685203845390" duration="5593000" />
+      <workItem from="1685264537494" duration="5952000" />
+      <workItem from="1685290552102" duration="3370000" />
+      <workItem from="1685377181784" duration="4545000" />
+      <workItem from="1685465357549" duration="2729000" />
+      <workItem from="1685610142247" duration="8363000" />
+      <workItem from="1685721152588" duration="2648000" />
     </task>
     <task id="LOCAL-00001" summary="feat: #1 - project setup, user service">
       <created>1680551072856</created>

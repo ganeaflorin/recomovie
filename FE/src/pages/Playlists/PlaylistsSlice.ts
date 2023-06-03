@@ -40,7 +40,7 @@ export const playlistsSlice = createSlice({
         },
         clearIsDeleted: (state) => {
             state.delete.isDeleted = false;
-        }
+        },
     },
 })
 

@@ -38,3 +38,7 @@ export interface ConfirmationTokenState {
     isLoading: boolean;
     confirmationStatus: string;
 }
+
+export enum ConfirmationTokenStatuses {
+    EMAIL_CONFIRMED_SUCCESS = 'EMAIL_CONFIRMED_SUCCESS'
+}

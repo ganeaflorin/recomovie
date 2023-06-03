@@ -8,22 +8,28 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="movie-info-service" />
+        <module name="friends-service" />
+        <module name="news-feed-service" />
         <module name="discovery-server" />
         <module name="recommendation-system-service" />
         <module name="playlists-service" />
-        <module name="ratings-data-service" />
         <module name="user-service" />
-        <module name="movie-catalog-service" />
         <module name="gateway" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="movie-catalog-service" target="17" />
+      <module name="ratings-data-service" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="discovery-server" options="-parameters" />
+      <module name="friends-service" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="movie-catalog-service" options="-parameters" />
       <module name="movie-info-service" options="-parameters" />
+      <module name="news-feed-service" options="-parameters" />
       <module name="playlists-service" options="-parameters" />
       <module name="ratings-data-service" options="-parameters" />
       <module name="recommendation-system-service" options="-parameters" />

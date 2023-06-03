@@ -4,5 +4,6 @@
         "EMAIL_CONFIRMED_SUCCESS": "Your email was successfully confirmed.",
         "TOKEN_EXPIRED": "Your token is expired. We have sent you a new token, please check your email to confirm it.",
         "TOKEN_NOT_FOUND": "Token not found."
-    }
+    },
+    "login": "You can now login."
 }

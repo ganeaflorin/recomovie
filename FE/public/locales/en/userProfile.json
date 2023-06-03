@@ -1,0 +1,11 @@
+{
+    "viewPlaylistsForbidden": "Only friends can view each others' playlists",
+    "removeFriend": "Remove friend",
+    "addFriend": "Send request",
+    "cancelFriend": "Cancel request",
+    "acceptFriend": "Accept request",
+    "declineFriend": "Decline request",
+    "errors": {
+        "USER_NOT_FOUND": "This user does not exist."
+    }
+}

@@ -4,6 +4,7 @@ import { call, put, select, takeLatest } from 'redux-saga/effects'
 import { getInput, getMoviesIds, getPlaylistData } from './selectors';
 import { MovieDetails } from "../../entities/recommendationList";
 import { getUserId } from "../Login/selectors";
+import { PayloadAction } from "@reduxjs/toolkit";
 
 export function* getRecommendationListAsync() {
     const userInput: string = yield select(getInput);
@@ -25,14 +26,9 @@ export function* getRecommendationListAsync() {
     }
 }
 
-export function* savePlaylistAsync() {
-    const movies: MovieDetails[] = yield select(getMoviesIds);
-    const { name } = yield select(getPlaylistData);
-    const userInput: string = yield select(getInput);
-    const userId: string = yield select(getUserId);
-
+export function* savePlaylistAsync(action: PayloadAction) {
     const { response, error } = yield call(
-        savePlaylist, { movies, name, userInput, userId }
+        savePlaylist, action.payload
     );
 
     if (response) {

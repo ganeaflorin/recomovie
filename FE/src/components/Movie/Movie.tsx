@@ -6,6 +6,7 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import ScheduleIcon from '@mui/icons-material/Schedule';
 import { useTranslation } from 'react-i18next';
 import { getRuntimeInHours } from './utils';
+import { v4 as uuidv4 } from 'uuid';
 
 const useStyles = makeStyles()((theme) => ({
     container: {
@@ -93,7 +94,7 @@ const Movie = ({ movie }: { movie: MovieDetails }) => {
                     </div>
                 </div>
                 <div className={classes.alignCenter}>
-                    {genres.map((genre) => <Typography variant="subtitle2" className={classes.genre}>
+                    {genres.map((genre) => <Typography key={uuidv4()} variant="subtitle2" className={classes.genre}>
                         {genre}
                     </Typography>)}
                 </div>
@@ -107,8 +108,8 @@ const Movie = ({ movie }: { movie: MovieDetails }) => {
                         <Typography variant="subtitle2" className={classes.marginRight}>{t('movieDetails.cast')}</Typography>
                         {cast.map((actor, index) =>
                             <>
-                                <Typography>{actor}</Typography>
-                                {index < cast.length - 1 && <Typography className={classes.separator}>|</Typography>}
+                                <Typography key={uuidv4()}>{actor}</Typography>
+                                {index < cast.length - 1 && <Typography key={uuidv4()} className={classes.separator}>|</Typography>}
                             </>
 
                         )}

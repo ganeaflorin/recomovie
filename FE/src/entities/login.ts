@@ -1,4 +1,4 @@
-import { Languages } from "./common";
+import { Languages, ThemeModes } from "./common";
 
 export enum LoginFormKeys {
     username = "username",
@@ -16,6 +16,7 @@ export interface User {
     username: string;
     isAuthenticated: boolean;
     preferredLanguage: Languages;
+    preferredThemeMode: ThemeModes;
 }
 
 export interface LoginState {

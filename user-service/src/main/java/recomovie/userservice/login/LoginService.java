@@ -3,7 +3,7 @@ package recomovie.userservice.login;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import recomovie.userservice.user.LoggedUser;
+import recomovie.userservice.user.UserInfoResponse;
 import recomovie.userservice.user.User;
 import recomovie.userservice.user.UserRepository;
 
@@ -36,6 +36,6 @@ public class LoginService {
         if(!user.getEnabled()) {
             return new ResponseEntity<>(ACCOUNT_NOT_CONFIRMED, UNAUTHORIZED);
         }
-        return new ResponseEntity<>(new LoggedUser(user.getId(), user.getUsername()), OK);
+        return new ResponseEntity<>(new UserInfoResponse(user.getId(), user.getUsername()), OK);
     }
 }

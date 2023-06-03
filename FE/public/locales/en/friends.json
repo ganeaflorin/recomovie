@@ -1,0 +1,11 @@
+{
+    "viewProfile": "View profile",
+    "removeFriend": "Remove",
+    "noFriends": "You have no friends yet. Go ahead and find your buddies using the search bar above.",
+    "noFriendRequests": "You have no new friend requests yet.",
+    "friendListTitle": "Friend list",
+    "friendRequestsTitle": "Friend requests",
+    "acceptFriendRequest": "Accept",
+    "declineFriendRequest": "Decline",
+    "addNewFriend": "Add your friends now"
+}

@@ -3,9 +3,9 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.45">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>2476</IntrospectionStateNumber>
+      <IntrospectionStateNumber>3674</IntrospectionStateNumber>
       <ServerVersion>15.2</ServerVersion>
-      <StartupTime>1682973565</StartupTime>
+      <StartupTime>1684596960</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -803,7 +803,7 @@ false Zulu
 13183||10|C|G
 13183||-9223372036854775808|U|G
 13183||10|U|G</Grants>
-      <IntrospectionStateNumber>2476</IntrospectionStateNumber>
+      <IntrospectionStateNumber>3674</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4234,7 +4234,7 @@ false Zulu
     <schema id="263" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>2476</IntrospectionStateNumber>
+      <IntrospectionStateNumber>3674</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>740</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -4245,90 +4245,108 @@ false Zulu
       <StateNumber>2193</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="265" parent="263" name="playlist_movie_sequence">
+    <sequence id="265" parent="263" name="pending_friend_request_sequence">
       <DasType>bigint|0s</DasType>
-      <ObjectId>18366</ObjectId>
-      <StateNumber>2414</StateNumber>
+      <ObjectId>18508</ObjectId>
+      <StateNumber>3563</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="266" parent="263" name="playlist_sequence">
+    <sequence id="266" parent="263" name="playlist_movie_sequence">
       <DasType>bigint|0s</DasType>
-      <ObjectId>18367</ObjectId>
-      <StateNumber>2415</StateNumber>
+      <ObjectId>18506</ObjectId>
+      <StateNumber>2816</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="267" parent="263" name="user_sequence">
+    <sequence id="267" parent="263" name="playlist_sequence">
+      <DasType>bigint|0s</DasType>
+      <ObjectId>18507</ObjectId>
+      <StateNumber>2817</StateNumber>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <sequence id="268" parent="263" name="user_sequence">
       <DasType>bigint|0s</DasType>
       <ObjectId>18241</ObjectId>
       <StateNumber>2194</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <table id="268" parent="263" name="confirmation_token">
+    <sequence id="269" parent="263" name="users_friendship_sequence">
+      <DasType>bigint|0s</DasType>
+      <ObjectId>18575</ObjectId>
+      <StateNumber>3672</StateNumber>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <table id="270" parent="263" name="confirmation_token">
       <ObjectId>18242</ObjectId>
       <StateNumber>2197</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="269" parent="263" name="playlists">
-      <ObjectId>18368</ObjectId>
-      <StateNumber>2416</StateNumber>
+    <table id="271" parent="263" name="playlists">
+      <ObjectId>18494</ObjectId>
+      <StateNumber>2814</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="270" parent="263" name="playlists_movies">
-      <ObjectId>18375</ObjectId>
-      <StateNumber>2417</StateNumber>
+    <table id="272" parent="263" name="playlists_movies">
+      <ObjectId>18501</ObjectId>
+      <StateNumber>2815</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="271" parent="263" name="users">
+    <table id="273" parent="263" name="users">
       <ObjectId>18247</ObjectId>
       <StateNumber>2197</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="272" parent="268" name="id">
+    <table id="274" parent="263" name="users_friendship">
+      <ObjectId>18576</ObjectId>
+      <StateNumber>3673</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <column id="275" parent="270" name="id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>2195</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="273" parent="268" name="confirmed_at">
+    <column id="276" parent="270" name="confirmed_at">
       <DasType>timestamp(6)|0s</DasType>
       <Position>2</Position>
       <StateNumber>2195</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="274" parent="268" name="created_at">
+    <column id="277" parent="270" name="created_at">
       <DasType>timestamp(6)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>2195</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="275" parent="268" name="expires_at">
+    <column id="278" parent="270" name="expires_at">
       <DasType>timestamp(6)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>2195</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="276" parent="268" name="token">
+    <column id="279" parent="270" name="token">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>2195</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="277" parent="268" name="users_id">
+    <column id="280" parent="270" name="users_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StateNumber>2195</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <foreign-key id="278" parent="268" name="fkjkui0c3qy41svu9mtesy578r5">
+    <foreign-key id="281" parent="270" name="fkjkui0c3qy41svu9mtesy578r5">
       <ColNames>users_id</ColNames>
       <ObjectId>18254</ObjectId>
       <RefColNames>id</RefColNames>
@@ -4338,7 +4356,7 @@ false Zulu
       <RefTableName>users</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="279" parent="268" name="confirmation_token_pkey">
+    <index id="282" parent="270" name="confirmation_token_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>18245</ObjectId>
@@ -4347,133 +4365,133 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="280" parent="268" name="confirmation_token_pkey">
+    <key id="283" parent="270" name="confirmation_token_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>18246</ObjectId>
       <Primary>1</Primary>
       <StateNumber>2195</StateNumber>
       <UnderlyingIndexId>18245</UnderlyingIndexId>
     </key>
-    <column id="281" parent="269" name="id">
+    <column id="284" parent="271" name="id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>2416</StateNumber>
+      <StateNumber>2814</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="282" parent="269" name="name">
+    <column id="285" parent="271" name="name">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
-      <StateNumber>2416</StateNumber>
+      <StateNumber>2814</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="283" parent="269" name="user_id">
+    <column id="286" parent="271" name="user_id">
       <DasType>bigint|0s</DasType>
       <Position>3</Position>
-      <StateNumber>2416</StateNumber>
+      <StateNumber>2814</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="284" parent="269" name="user_input">
+    <column id="287" parent="271" name="user_input">
       <DasType>varchar(255)|0s</DasType>
       <Position>4</Position>
-      <StateNumber>2416</StateNumber>
+      <StateNumber>2814</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="285" parent="269" name="playlists_pkey">
+    <index id="288" parent="271" name="playlists_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>18373</ObjectId>
+      <ObjectId>18499</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2416</StateNumber>
+      <StateNumber>2814</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="286" parent="269" name="playlists_pkey">
+    <key id="289" parent="271" name="playlists_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>18374</ObjectId>
+      <ObjectId>18500</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2416</StateNumber>
-      <UnderlyingIndexId>18373</UnderlyingIndexId>
+      <StateNumber>2814</StateNumber>
+      <UnderlyingIndexId>18499</UnderlyingIndexId>
     </key>
-    <column id="287" parent="270" name="id">
+    <column id="290" parent="272" name="id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>2417</StateNumber>
+      <StateNumber>2815</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="288" parent="270" name="movie_id">
+    <column id="291" parent="272" name="movie_id">
       <DasType>bigint|0s</DasType>
       <Position>2</Position>
-      <StateNumber>2417</StateNumber>
+      <StateNumber>2815</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="289" parent="270" name="playlist_id">
+    <column id="292" parent="272" name="playlist_id">
       <DasType>bigint|0s</DasType>
       <Position>3</Position>
-      <StateNumber>2417</StateNumber>
+      <StateNumber>2815</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="290" parent="270" name="playlists_movies_pkey">
+    <index id="293" parent="272" name="playlists_movies_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>18378</ObjectId>
+      <ObjectId>18504</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2417</StateNumber>
+      <StateNumber>2815</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="291" parent="270" name="playlists_movies_pkey">
+    <key id="294" parent="272" name="playlists_movies_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>18379</ObjectId>
+      <ObjectId>18505</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2417</StateNumber>
-      <UnderlyingIndexId>18378</UnderlyingIndexId>
+      <StateNumber>2815</StateNumber>
+      <UnderlyingIndexId>18504</UnderlyingIndexId>
     </key>
-    <column id="292" parent="271" name="id">
+    <column id="295" parent="273" name="id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>2196</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="293" parent="271" name="email">
+    <column id="296" parent="273" name="email">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
       <StateNumber>2196</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="294" parent="271" name="enabled">
+    <column id="297" parent="273" name="enabled">
       <DasType>boolean|0s</DasType>
       <Position>3</Position>
       <StateNumber>2196</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="295" parent="271" name="locked">
+    <column id="298" parent="273" name="locked">
       <DasType>boolean|0s</DasType>
       <Position>4</Position>
       <StateNumber>2196</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="296" parent="271" name="password">
+    <column id="299" parent="273" name="password">
       <DasType>varchar(255)|0s</DasType>
       <Position>5</Position>
       <StateNumber>2196</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="297" parent="271" name="user_role">
+    <column id="300" parent="273" name="user_role">
       <DasType>varchar(255)|0s</DasType>
       <Position>6</Position>
       <StateNumber>2196</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="298" parent="271" name="username">
+    <column id="301" parent="273" name="username">
       <DasType>varchar(255)|0s</DasType>
       <Position>7</Position>
       <StateNumber>2196</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="299" parent="271" name="users_pkey">
+    <index id="302" parent="273" name="users_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>18252</ObjectId>
@@ -4482,12 +4500,53 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="300" parent="271" name="users_pkey">
+    <key id="303" parent="273" name="users_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>18253</ObjectId>
       <Primary>1</Primary>
       <StateNumber>2196</StateNumber>
       <UnderlyingIndexId>18252</UnderlyingIndexId>
+    </key>
+    <column id="304" parent="274" name="id">
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>3673</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="305" parent="274" name="receiving_user_id">
+      <DasType>bigint|0s</DasType>
+      <Position>2</Position>
+      <StateNumber>3673</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="306" parent="274" name="sending_user_id">
+      <DasType>bigint|0s</DasType>
+      <Position>3</Position>
+      <StateNumber>3673</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="307" parent="274" name="status">
+      <DasType>boolean|0s</DasType>
+      <Position>4</Position>
+      <StateNumber>3673</StateNumber>
+      <TypeId>16</TypeId>
+    </column>
+    <index id="308" parent="274" name="users_friendship_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>18579</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>3673</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="309" parent="274" name="users_friendship_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>18580</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>3673</StateNumber>
+      <UnderlyingIndexId>18579</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

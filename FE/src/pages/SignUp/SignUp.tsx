@@ -32,7 +32,6 @@ const SignUp = () => {
     const dispatch = useDispatch();
     const fields = useSelector(getSignUpFields);
     const isSuccessSignUp = useSelector(getIsSuccessSignUp);
-    console.log("🚀 ~ file: SignUp.tsx:35 ~ SignUp ~ isSuccessSignUp:", isSuccessSignUp)
     const isLoading = useSelector(getSignUpIsLoading);
     const error = useSelector(getSignUpError);
     const formHasError = Object.values(errors).some(value => value);
@@ -88,7 +87,7 @@ const SignUp = () => {
     return (
         <Loader condition={isLoading}>
             <CenterContainer>
-                {isSuccessSignUp && <Typography>{t('confirmationToken')}</Typography>}
+                {isSuccessSignUp && <Typography variant="h5">{t('confirmationToken')}</Typography>}
                 {!isSuccessSignUp &&
                     <>
                         <Typography variant='h4'>{t('title')}</Typography>

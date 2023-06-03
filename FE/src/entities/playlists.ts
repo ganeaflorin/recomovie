@@ -1,6 +1,6 @@
 import { MovieDetails } from "./recommendationList";
 
-export interface Playlist {
+export interface PlaylistType {
     id: string;
     userInput: string;
     name: string;
@@ -14,15 +14,16 @@ interface DeleteState {
 }
 
 export default interface PlaylistsState {
-    data: Playlist[];
+    data: PlaylistType[];
     isLoading: boolean;
     error: Error | undefined;
     delete: DeleteState;
 }
 
 export interface PlaylistProps {
-    playlist: Playlist;
+    playlist: PlaylistType;
     borderCondition?: boolean;
     marginCondition?: boolean;
+    canDelete: boolean;
     handleDelete: (playlistId: string) => void;
 }

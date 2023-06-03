@@ -6,13 +6,13 @@
       <list>
         <option value="$PROJECT_DIR$/discovery-server/pom.xml" />
         <option value="$PROJECT_DIR$/movie-info-service/pom.xml" />
-        <option value="$PROJECT_DIR$/ratings-data-service/pom.xml" />
-        <option value="$PROJECT_DIR$/movie-catalog-service/pom.xml" />
         <option value="$PROJECT_DIR$/gateway/pom.xml" />
         <option value="$PROJECT_DIR$/../user-service/pom.xml" />
         <option value="$PROJECT_DIR$/user-service/pom.xml" />
         <option value="$PROJECT_DIR$/recommendation-system-service/pom.xml" />
         <option value="$PROJECT_DIR$/playlists-service/pom.xml" />
+        <option value="$PROJECT_DIR$/friends-service/pom.xml" />
+        <option value="$PROJECT_DIR$/news-feed-service/pom.xml" />
       </list>
     </option>
   </component>

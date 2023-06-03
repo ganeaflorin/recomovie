@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Optional;
 
 @Repository
@@ -19,4 +20,9 @@ public interface UserRepository extends JpaRepository<User, Long> {
             "SET user.enabled = TRUE " +
             "WHERE user.username = ?1")
     int enableUser(String username);
+
+    @Query("SELECT us from User us " +
+    "WHERE us.username LIKE %?1%"
+    )
+    List<UserInfoResponse> findByUsernameSubstring(String substring);
 }

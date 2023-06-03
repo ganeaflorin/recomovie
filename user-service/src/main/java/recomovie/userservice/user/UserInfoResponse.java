@@ -7,12 +7,17 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class LoggedUser {
+public class UserInfoResponse {
     private Long id;
     private String username;
 
-    public LoggedUser(Long id, String username) {
+    public UserInfoResponse(Long id, String username) {
         this.id = id;
         this.username = username;
+    }
+
+    public UserInfoResponse(User user) {
+        this.id = user.getId();
+        this.username = user.getUsername();
     }
 }

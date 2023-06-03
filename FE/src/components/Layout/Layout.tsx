@@ -3,9 +3,7 @@ import { Navigate, Outlet } from 'react-router-dom';
 import Footer from '../Footer';
 import Navbar from '../Navbar';
 import { makeStyles } from 'tss-react/mui';
-import { useSelector } from 'react-redux';
-import { getIsAuthenticated } from '../../pages/Login/selectors';
-import paths from '../../common/paths';
+import ProtectedPath from './ProtectedPath';
 
 const useStyles = makeStyles()((theme) => ({
     root: {
@@ -13,25 +11,23 @@ const useStyles = makeStyles()((theme) => ({
         flexDirection: 'column',
     },
     content: {
-        minHeight: 'calc(100vh - 122px)',
+        minHeight: 'calc(100vh - 132px)',
         display: 'flex',
         alignItems: 'center',
         flexDirection: 'column'
     }
 }));
 
-const Layout = ({ isAuthRequired }: any) => {
+const Layout = () => {
     const { classes } = useStyles();
-    const isAuthenticated = useSelector(getIsAuthenticated);
-    console.log("🚀 ~ file: Layout.tsx:26 ~ Layout ~ isAuthenticated:", isAuthenticated)
-    console.log("🚀 ~ file: Layout.tsx:24 ~ Layout ~ isAuthRequired:", isAuthRequired)
 
     return (
         <div className={classes.root}>
             <Navbar />
             <div className={classes.content}>
-                {/* {isAuthRequired && isAuthenticated === true ? <Outlet /> : <Navigate to={paths.login} />} */}
-                {!isAuthRequired && <Outlet />}
+                <ProtectedPath>
+                    <Outlet />
+                </ProtectedPath>
             </div>
             <Footer />
         </div>

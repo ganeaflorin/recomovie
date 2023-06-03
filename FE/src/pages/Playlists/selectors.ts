@@ -22,3 +22,8 @@ export const getIsDeleted = createSelector(
     [getRoot],
     (playlists) => playlists.delete.isDeleted,
 );
+
+export const getPlaylistById = (playlistId: string) => createSelector(
+    [getData],
+    (playlists) => playlists.find(playlist => String(playlist.id) === playlistId)
+)

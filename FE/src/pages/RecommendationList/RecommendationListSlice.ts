@@ -42,7 +42,7 @@ export const recommendationListSlice = createSlice({
         getRecommendationListTrigger: (state) => {
             state.isLoading = true;
         },
-        savePlaylistTrigger: (state) => {
+        savePlaylistTrigger: (state, action) => {
             state.playlist.isLoading = true;
         },
         savePlaylistSuccess: (state) => {

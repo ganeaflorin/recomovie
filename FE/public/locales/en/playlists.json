@@ -1,4 +1,7 @@
 {
     "noPlaylists": "You have no playlists added yet. What are you waiting for? Go to the Recommendations tab and discover new movies.",
-    "deletePlaylist": "Delete Playlist"
+    "friendNoPlaylists": "Your friend {{friendName}} does not have any playlists yet.",
+    "playlistsOfFriend": "{{friendName}}'s playlists",
+    "deletePlaylist": "Delete playlist",
+    "savePlaylist": "Save playlist"
 }
