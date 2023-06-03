@@ -6,7 +6,7 @@ import paths from '../../common/paths';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUsers } from '../../pages/Users/selectors';
-import { clearUsers, getUsersTrigger } from '../../pages/Users/UserSlice';
+import { getUsersTrigger, } from '../../pages/Users/UserSlice';
 import { User } from '../../entities/common';
 
 const useStyles = makeStyles()((theme) => ({
@@ -39,7 +39,6 @@ const UserSearch = () => {
 
     const onInputChange = (e: any) => {
         const { value } = e?.target ?? {};
-        dispatch(clearUsers());
         if (value?.length >= 3) {
             dispatch(getUsersTrigger({ query: value }));
         }

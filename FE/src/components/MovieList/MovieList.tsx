@@ -14,8 +14,8 @@ const MovieList = ({ movies }: { movies: MovieDetails[] }) => {
     const { classes } = useStyles();
     return (
         <>
-            {movies.map(movie => <div key={uuidv4()} className={classes.movieContainer} >
-                <Movie key={uuidv4()} movie={movie} /></div >)
+            {movies.map(movie => <div key={uuidv4()} className={classes.movieContainer}>
+                <Movie movie={movie} /></div >)
             }
         </>
     )

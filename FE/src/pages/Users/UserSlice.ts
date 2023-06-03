@@ -6,11 +6,13 @@ const initialState: UsersState = {
     isLoading: false,
     error: undefined,
 }
+
 export const usersSlice = createSlice({
     name: 'users',
     initialState,
     reducers: {
         getUsersTrigger: (state, action) => {
+            state.users = [];
             state.isLoading = true;
         },
         getUsersSuccess: (state, action) => {
@@ -23,7 +25,7 @@ export const usersSlice = createSlice({
         },
         clearUsers: (state) => {
             state.users = initialState.users;
-        }
+        },
     },
 })
 

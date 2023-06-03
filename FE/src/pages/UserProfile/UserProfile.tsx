@@ -62,33 +62,25 @@ const UserProfile = () => {
     const status = useSelector(getStatus);
     const sendingUserId = useSelector(getSendingUserId);
     const receivingUserId = useSelector(getReceivingUserId);
-    const [getFriendships, setGetFriendships] = useState(false);
     const userProfileError = useSelector(getUserProfileError);
     const isOwnProfile = String(currentUserId) === id;
 
     const updateFriendshipStatus = (sendingUserId: string, receivingUserId: string | undefined, status: boolean) => {
         const payload = { sendingUserId, receivingUserId, status };
         dispatch(updateFriendStatusTrigger(payload));
-        setGetFriendships(true);
+        dispatch(getFriendshipStatusTrigger({ sendingUserId: currentUserId, receivingUserId: id }))
+
     }
 
     const sendFriendRequest = (sendingUserId: string, receivingUserId: string | undefined) => {
         const payload = { sendingUserId, receivingUserId };
         dispatch(sendFriendRequestTrigger(payload));
-        setGetFriendships(true);
     }
 
     useEffect(() => {
         dispatch(getUserProfileTrigger({ id }));
         dispatch(getFriendshipStatusTrigger({ sendingUserId: currentUserId, receivingUserId: id }))
     }, [id, currentUserId, dispatch]);
-
-    useEffect(() => {
-        if (getFriendships) {
-            dispatch(getFriendshipStatusTrigger({ sendingUserId: currentUserId, receivingUserId: id }))
-            setGetFriendships(false);
-        }
-    }, [getFriendships, dispatch, setGetFriendships, currentUserId, id])
 
     return (
         <>

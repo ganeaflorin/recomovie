@@ -107,10 +107,10 @@ const Movie = ({ movie }: { movie: MovieDetails }) => {
                     <div className={classes.alignCenter}>
                         <Typography variant="subtitle2" className={classes.marginRight}>{t('movieDetails.cast')}</Typography>
                         {cast.map((actor, index) =>
-                            <>
-                                <Typography key={uuidv4()}>{actor}</Typography>
-                                {index < cast.length - 1 && <Typography key={uuidv4()} className={classes.separator}>|</Typography>}
-                            </>
+                            <div key={uuidv4()} className={classes.alignCenter}>
+                                <Typography>{actor}</Typography>
+                                {index < cast.length - 1 && <Typography className={classes.separator}>|</Typography>}
+                            </div>
 
                         )}
                     </div>

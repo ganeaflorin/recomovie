@@ -41,7 +41,7 @@ export function* getFriendshipStatusAsync(action: PayloadAction) {
     }
 }
 
-export function* sendFriendRequestAsync(action: PayloadAction) {
+export function* sendFriendRequestAsync(action: PayloadAction<any>) {
     const { response, error } = yield call(
         newFriendRequest,
         action.payload
@@ -50,8 +50,11 @@ export function* sendFriendRequestAsync(action: PayloadAction) {
     if (response) {
         yield put({
             type: sendFriendRequestSuccess.type,
-            payload: 'aaa'
         });
+        yield put({
+            type: getFriendshipStatusTrigger.type,
+            payload: { ...action.payload }
+        })
     } else {
         yield put({
             type: sendFriendRequestFailure.type,

@@ -27,7 +27,7 @@ export const friendsSlice = createSlice({
         updateFriendStatusTrigger: (state, action) => {
             state.isLoading = true;
         },
-        updateFriendStatusSuccess: (state, action) => {
+        updateFriendStatusSuccess: (state) => {
             state.isLoading = false;
             state.error = undefined;
         },

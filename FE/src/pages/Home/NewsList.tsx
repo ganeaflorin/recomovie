@@ -7,6 +7,7 @@ import { NewsType } from '../../entities/home';
 import News from '../../components/News';
 import { makeStyles } from 'tss-react/mui';
 import Loader from '../../components/Loader';
+import { v4 as uuidv4 } from 'uuid';
 
 const useStyles = makeStyles()((theme) => ({
     title: {
@@ -26,7 +27,7 @@ const NewsList = () => {
             <Typography variant="h4" className={classes.title}>
                 {t('newsTitle')}
             </Typography>
-            {newsList.map((news: NewsType, index: number) => <News news={news} borderCondition={index !== newsList.length - 1} />)}
+            {newsList.map((news: NewsType, index: number) => <News key={uuidv4()} news={news} borderCondition={index !== newsList.length - 1} />)}
         </Loader>
     )
 }

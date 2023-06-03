@@ -16,15 +16,15 @@ function App() {
   const { t } = useTranslation('common');
 
   return (
-    <Suspense fallback={<Typography>{t('loading')}</Typography>}>
-      <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
-          <ThemeProviderWrapper>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <ThemeProviderWrapper>
+          <Suspense fallback={<Typography>{t('loading')}</Typography>}>
             <RouterProvider router={router} />
-          </ThemeProviderWrapper>
-        </PersistGate>
-      </Provider>
-    </Suspense>
+          </Suspense>
+        </ThemeProviderWrapper>
+      </PersistGate>
+    </Provider>
   )
 }
 

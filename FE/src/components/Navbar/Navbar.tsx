@@ -1,6 +1,6 @@
 import { Button, Drawer, Icon } from '@mui/material';
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import paths from '../../common/paths';
 import { makeStyles } from 'tss-react/mui';
 import { useTranslation } from 'react-i18next';
@@ -93,9 +93,11 @@ const Navbar = () => {
     const [open, setOpen] = useState(false);
     const username = useSelector(getUsername);
     const userId = useSelector(getUserId);
+    const navigate = useNavigate();
 
     const handleLogout = () => {
         dispatch(logoutTrigger());
+        navigate(paths.home);
         setOpen(false);
     }
 

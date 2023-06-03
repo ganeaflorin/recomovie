@@ -11,7 +11,6 @@ export function* loginAsync() {
         fields,
     );
     if (response) {
-        window.location.reload();
         yield put({
             type: loginSuccess.type,
             payload: response.data,

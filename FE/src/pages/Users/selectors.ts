@@ -8,4 +8,3 @@ export const getUsers = createSelector(
     (users) => users.users,
 );
 
-

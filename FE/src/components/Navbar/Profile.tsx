@@ -9,7 +9,7 @@ import { Languages, ThemeModes } from '../../entities/common';
 import i18n from '../../i18n';
 import { logoutTrigger, updatePreferredLanguage, updatePreferredThemeMode } from '../../pages/Login/LoginSlice';
 import paths from '../../common/paths';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import clsx from 'clsx';
 
 
@@ -37,6 +37,9 @@ const useStyles = makeStyles()((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'start',
+        '& .MuiRadio-root': {
+            color: theme.palette.primary.main,
+        }
     },
     radioGroupMarginTop: {
         marginTop: '16px',
@@ -61,7 +64,7 @@ const Profile = () => {
     const { classes } = useStyles();
     const dispatch = useDispatch();
     const { t } = useTranslation('common');
-
+    const navigate = useNavigate();
 
     const handleMouseOver = () => {
         setOpen(true);
@@ -85,6 +88,7 @@ const Profile = () => {
 
     const handleLogout = () => {
         dispatch(logoutTrigger());
+        navigate(paths.home);
     }
 
     return (

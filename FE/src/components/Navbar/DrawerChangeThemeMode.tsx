@@ -38,7 +38,6 @@ const DrawerChangeThemeMode = () => {
     const handleThemeModeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { value } = e.target;
         dispatch(updatePreferredThemeMode(value));
-        // window.location.reload();
     }
 
     return (

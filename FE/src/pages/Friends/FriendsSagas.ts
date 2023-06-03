@@ -2,6 +2,7 @@ import { call, put, takeLatest } from 'redux-saga/effects'
 import { PayloadAction } from '@reduxjs/toolkit';
 import { getFriendRequests, getFriends, updateFriendsStatus } from './api';
 import { getFriendListFailure, getFriendListSuccess, getFriendListTrigger, getFriendRequestsFailure, getFriendRequestsSuccess, updateFriendStatusFailure, updateFriendStatusSuccess, updateFriendStatusTrigger } from './FriendsSlice';
+import { getFriendshipStatusTrigger } from '../UserProfile/UserProfileSlice';
 
 export function* getFriendListAsync(action: PayloadAction) {
     const { response, error } = yield call(
@@ -22,7 +23,7 @@ export function* getFriendListAsync(action: PayloadAction) {
     }
 }
 
-export function* updateFriendStatusAsync(action: PayloadAction) {
+export function* updateFriendStatusAsync(action: PayloadAction<any>) {
     const { response, error } = yield call(
         updateFriendsStatus,
         action.payload
@@ -30,8 +31,11 @@ export function* updateFriendStatusAsync(action: PayloadAction) {
     if (response) {
         yield put({
             type: updateFriendStatusSuccess.type,
-            payload: 'aa'
         });
+        yield put({
+            type: getFriendshipStatusTrigger.type,
+            payload: { ...action.payload }
+        })
     } else {
         yield put({
             type: updateFriendStatusFailure.type,

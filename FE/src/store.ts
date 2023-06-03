@@ -46,7 +46,6 @@ const rootReducer = (state: any, action: PayloadAction) => {
     if (action.type === logoutTrigger.type) {
         state = undefined;
         localStorage.clear();
-        window.location.reload();
     }
     return appReducer(state, action);
 };
@@ -55,11 +54,13 @@ const sagaMiddleware = createSagaMiddleware()
 
 export const store = configureStore({
     reducer: rootReducer,
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware({
-        serializableCheck: {
-            ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-        },
-    }).concat(sagaMiddleware),
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware(
+        {
+            serializableCheck: {
+                ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+            },
+        }
+    ).concat(sagaMiddleware),
 });
 
 export const persistor = persistStore(store);

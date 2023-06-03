@@ -42,7 +42,7 @@ export const userProfileSlice = createSlice({
         sendFriendRequestTrigger: (state, action) => {
             state.isLoading = true;
         },
-        sendFriendRequestSuccess: (state, action) => {
+        sendFriendRequestSuccess: (state) => {
             state.isLoading = false;
             state.friendshipError = undefined;
         },
