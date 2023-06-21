@@ -6,15 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cb382d6f-1c35-4f4f-a983-c05146d3783d" name="Changes" comment="fix: #6 - add services for nlp, recommendations, and service connecting these 2 leftovers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/components/Movie/Movie.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/components/Movie/Movie.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/components/MovieList/MovieList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/components/MovieList/MovieList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/components/Navbar/DrawerChangeThemeMode.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/components/Navbar/DrawerChangeThemeMode.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/components/UserSearch/UserSearch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/components/UserSearch/UserSearch.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/pages/Home/NewsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/pages/Home/NewsList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/pages/Users/UserSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/pages/Users/UserSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/pages/Users/selectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/pages/Users/selectors.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +73,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;fb90a15f34f6e70528e77d8f3b8eeb7c&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -205,6 +196,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="SwaggerCodegen">
+      <option name="activeConfigurationType" value="FILE" />
+      <option name="configurationPath" value="" />
+      <option name="customJreEnabled" value="false" />
+      <option name="customTemplatesPath" value="" />
+      <option name="enableDebugLogging" value="false" />
+      <option name="generateToPath" value="C:\Users\andre\Downloads\recomovie\gen" />
+      <option name="generationParameters">
+        <list />
+      </option>
+      <option name="generatorPath" value="https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/5.0.0/openapi-generator-cli-5.0.0.jar" />
+      <option name="jdkPath" value="" />
+      <option name="language" value="java" />
+      <option name="specificationPath" value="C:\Users\andre\AppData\Roaming\JetBrains\IntelliJIdea2022.3\openApiExport\recomovie-openapi_1.yaml" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Compound.Recomovie" />
       <item itemvalue="Spring Boot.UserServiceApplication" />
@@ -276,6 +283,18 @@
       <workItem from="1685721152588" duration="2648000" />
       <workItem from="1685783464618" duration="8059000" />
       <workItem from="1685817468504" duration="3649000" />
+      <workItem from="1685873970459" duration="76000" />
+      <workItem from="1685874654234" duration="979000" />
+      <workItem from="1685985057726" duration="1592000" />
+      <workItem from="1686251664701" duration="339000" />
+      <workItem from="1686335935227" duration="5478000" />
+      <workItem from="1686386838599" duration="6356000" />
+      <workItem from="1686478875900" duration="9726000" />
+      <workItem from="1686504238759" duration="6235000" />
+      <workItem from="1686587670614" duration="1407000" />
+      <workItem from="1686862141251" duration="627000" />
+      <workItem from="1686939093391" duration="2248000" />
+      <workItem from="1687091854614" duration="630000" />
     </task>
     <task id="LOCAL-00001" summary="feat: #1 - project setup, user service">
       <created>1680551072856</created>
