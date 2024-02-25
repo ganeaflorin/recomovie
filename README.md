@@ -1,4 +1,4 @@
-# Web system based on microservices and natural language processing for movie recommendations
+# <p align="center">Web system based on microservices and natural language processing for movie recommendations</p>
 
 ## Demonstration video
 
