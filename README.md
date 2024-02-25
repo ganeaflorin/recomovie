@@ -40,8 +40,9 @@ The request is passed to the microservice, which handles it and returns the resp
 
 This process and the way the microservices interact with each other is represented in the below diagram:
 
-![backend architecture](https://i.imgur.com/yxWGCTq.png)
-
+<div align="center">
+  <img src="https://i.imgur.com/yxWGCTq.png" alt="backend architecture">
+</div>
 
 ### Frontend
 
@@ -81,6 +82,7 @@ Example of an input and the associated labels:
  Fincher and I enjoy movies directed by James Cameron. I sometimes like films starring Robert
  Downey Jr. and Jake Gyllenhaal and I love films about war."
 
+<div align="center">
 <table>
   <tr>
     <th>
@@ -124,6 +126,8 @@ Example of an input and the associated labels:
     <td>keyword</td>
   </tr>
 </table>
+</div>
+
 
 To generate the recommendations, we have approached the content based filtering strategy. We have aggregated a dataset with movies and the features that can be recognised. 
 
