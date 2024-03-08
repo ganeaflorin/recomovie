@@ -11,8 +11,7 @@ For each input, The user is given a list of 20 movies. These movies may be saved
 
 The application facilitates social interaction by allowing you to search for and befriend other users. You are able to see and store your friends' playlists in your own library.
 
-In order to enchance the user experience, the application is internationalized, having two localizations available: English and Romanian. Additionally, there is
-the option to choose between a light and a dark theme. Real-time validations are included into the login and registration forms to deliver prompt feedback.
+To improve the user experience, the application is internationalized, having two localizations available: English and Romanian. Additionally, there is the option to choose between a light and a dark theme. Real-time validations are included into the login and registration forms to deliver prompt feedback.
 
 ## Technologies and architecture
 
@@ -31,8 +30,8 @@ Tech stack:
 </ul>
 
 The server is built using the microservices-oriented architecture, including 8 microservices orchestrated by API Gateway and Service Discovery. 
-To facilitate the development of the backend of the application, we've used Java for 6 microservices, 
-and Python for the 2 that make up the recommendation system to benefit from Python's support for data processing and wide range of libraries for the approached areas.
+To ease the development of the backend of the application, we've used Java for 6 microservices, 
+and Python for the 2 that make up the recommendation system, taking advantage of Python's support for data processing and wide range of libraries for the approached areas.
 
 
 The API Gateway intercepts the incoming requests, decides which microservice is responsible of handling it and communicates with the Service Discovery in order to find the IP address of it.
