@@ -6,19 +6,19 @@ You can view the demonstration video by following this [link](https://www.youtub
 
 ## Purpose and functionalities
 
-The objective of this application is to provide movie recommendations based on the users' input expressed in natural language.
-For each input, the user is provided with a list of 20 films which can be saved as a playlist, and later it can be viewed or deleted.
+The objective of this application is to suggest movies based on the users' input expressed in natural language.
+For each input, The user is given a list of 20 movies. These movies may be saved as a playlist and afterward viewed or removed.
 
-The application also provides social interaction, as the you can search for other users and add them as friends. You can view your friends' playlists and save them in your own library.  
+The application facilitates social interaction by allowing you to search for and befriend other users. You are able to see and store your friends' playlists in your own library.
 
-In order to enchance the user experience, the application is internationalized, having two localizations available: English and Romanian. Additionally, it provides
+In order to enchance the user experience, the application is internationalized, having two localizations available: English and Romanian. Additionally, there is
 the option to choose between a light and a dark theme. Real-time validations are included into the login and registration forms to deliver prompt feedback.
 
 ## Technologies and architecture
 
 ### Backend
 
-Used technologies:
+Tech stack:
 
 <ul>
 <li>API Gateway</li>
